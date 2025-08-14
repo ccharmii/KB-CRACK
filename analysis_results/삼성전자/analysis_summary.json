@@ -1,0 +1,18 @@
+{
+  "company_name": "삼성전자",
+  "current_credit_grade": "AA+",
+  "corp_code": "00126380",
+  "start_time": "2025-08-14T00:57:20.246004",
+  "output_directory": "analysis_results\\삼성전자",
+  "steps_completed": [
+    "financial_analysis",
+    "non_financial_analysis",
+    "financial_reasoning",
+    "news_analysis",
+    "final_report"
+  ],
+  "steps_failed": [],
+  "latest_quarter": "2025Q1",
+  "end_time": "2025-08-14T01:04:20.873112",
+  "total_duration": "0:07:00.627108"
+}

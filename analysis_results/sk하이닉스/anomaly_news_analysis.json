@@ -1,0 +1,196 @@
+{
+  "success": true,
+  "analysis_method": "hybrid_relevance_check",
+  "methodology": {
+    "cosine_similarity_weight": 0.3,
+    "llm_semantic_weight": 0.7,
+    "relevance_threshold": 6.0,
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "company_info": {
+    "기업명": "에스케이하이닉스(주)",
+    "영문기업명": "SK hynix Inc.",
+    "종목코드": "000660",
+    "대표자명": "곽노정",
+    "법인구분": "Y",
+    "법인등록번호": "1344110001387",
+    "사업자등록번호": "1268103725",
+    "주소": "경기도 이천시  부발읍 경충대로 2091",
+    "업종코드": "2612",
+    "설립일": "19491015",
+    "결산월": "12",
+    "업종": "반도체 제조업",
+    "제품군": "반도체,컴퓨터,통신기기 제조,도매",
+    "Current_credit_grade": "BB+"
+  },
+  "analysis_summary": {
+    "total_anomalies": 1,
+    "successful_analyses": 1,
+    "analysis_timestamp": "2025-08-14T00:28:51.388675"
+  },
+  "anomaly_news_analyses": [
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율",
+        "description": "41.91로 과거 4분기 평균인 123.86를 벗어나는 이상치 탐지 (표준편차 2.0배 하회)",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "time_series",
+        "source": "timeseries_analysis"
+      },
+      "analysis": {
+        "primary_cause": "반도체 불황으로 인한 매출 감소",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: SK하이닉스의 최근 EPS와 PER 지표가 낮아지고 있으며, 이는 매출 감소와 관련이 있을 수 있음.",
+          "뉴스 2: SK하이닉스가 2023년 7조7천억원의 연간 적자를 기록했음에도 불구하고 R&D 비중을 늘리고 있다는 점에서 매출 감소가 심각함을 나타냄."
+        ],
+        "detailed_explanation": "SK하이닉스는 최근 반도체 시장의 불황으로 인해 매출액 증가율이 급격히 감소하였으며, 이는 과거 4분기 평균과 비교했을 때 큰 차이를 보이고 있습니다. 특히, 연간 적자를 기록한 상황에서 매출 감소는 더욱 두드러지며, 이는 기업의 재무 건전성에 부정적인 영향을 미칠 수 있습니다. R&D 비중을 늘리고 있지만, 이는 단기적인 매출 회복에는 도움이 되지 않을 수 있습니다.",
+        "news_sources": [
+          "https://comp.wisereport.co.kr/company/c1010001.aspx?cmp_cd=000660",
+          "https://thevc.kr/skhynix"
+        ],
+        "impact_assessment": "매출 감소는 기업의 재무 상태에 부정적인 영향을 미치며, 투자자 신뢰도 저하로 이어질 수 있음.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 평균 관련성 점수 5.44/10으로 보통 수준"
+      },
+      "news_evidence": [
+        {
+          "title": "Wisereport SK하이닉스 - 기업현황 - 기업모니터",
+          "url": "https://comp.wisereport.co.kr/company/c1010001.aspx?cmp_cd=000660",
+          "content": "SK하이닉스 000660 홈페이지대표전화주소 EPS27,182  BPS107,256  PER7.52  업종PER9.76  PBR1.91  현금배당수익률 1.08%  전일종가 204,500  도움말 KOSPI : 코스피 전기·전자|WI26 : 반도체|12월 결산|K200|NXT 기업 펀더멘털 실적, 컨센서스| 주요지표 | 2024/12(A) | 2025/12(E) | Fwd. 12M(E) | 연결 기업의 당기순이익 및 자본총계는 지배주주 기준 연결 재무제표의 경우, 당기순이익 잠정치에서 ○는 전체, ●는 지배주주 기준 잠정치를 별도/연결 동시 발표할 경우, 주 재무제표 기준 ##### 투자의견 컨센서스 투자의견컨센서스| 3.96 Image 1: 투자의견 컨센서스 그래프(강력매도1|매도2|중립3|매수4|강력매수5), 값:3.96 | 투자의견 | 목표주가(원) | EPS(원) | PER(배) | 추정기관수 | ###### 투자의견 및 목표주가 3년간 실적 및 2년간 추정데이타 목록| 재무년월 | 매출액(억원, %) | 영업이익(억원, %) | 당기순이익(억원, %) | EPS (원) | PER (배) | PBR (배) | ROE (%) | EV/EBITDA (배) | 순부채비율 (%) | 주재무제표 | 연결 기업의 당기순이익 및 자본총계는 지배주주 기준 ",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.25,
+          "cosine_score": 4.51,
+          "semantic_score": 7.0
+        },
+        {
+          "title": "The VC 에스케이하이닉스(메모리 반도체) - 기업정보 - THE VC",
+          "url": "https://thevc.kr/skhynix",
+          "content": "메모리 반도체 현재에스케이하이닉스한국∙대기업/중견기업 | 메모리 반도체메모리 반도체 (DRAM, NAND Flash, CIS) | 제조 | 반도체/디스플레이반도체 | 알 수 없음알 수 없음 80%제주반도체한국∙대기업/중견기업 | 메모리 반도체메모리 반도체 (DRAM, SRAM) | 제조 | 반도체/디스플레이반도체 | Series C211억원 76%한양디지텍한국∙대기업/중견기업 | 반도체 메모리 모듈반도체 메모리 모듈 | 제조 | 반도체/디스플레이반도체 | 알 수 없음알 수 없음 72%브이메모리한국∙스타트업 | 브이메모리6G, 7G에 대응하는 100만배 더 빠른 차세대 반도체 메모리 | 제조 | 반도체/디스플레이반도체 | Seed알 수 없음 70%넷솔한국∙중소기업 | 차세대 메모리 반도체스핀 주입형 자기메모리 반도체 (STT-MRAM) | 제조 | 반도체/디스플레이반도체 | Series C118억원 69%테크윙한국∙대기업/중견기업 | 반도체 테스트 장비반도체 메모리 테스트 핸들러 장비 | 제조 | 반도체/디스플레이반도체 | Series C97억 5000만원 특히 곽노정 SK하이닉스 대표이사 사장은 반도체 불황으로 2023년 7조7천억원의 연간 적자를 냈음에도 불구하고 R&D 비중을 꾸준히 늘려왔다.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.19,
+          "cosine_score": 3.12,
+          "semantic_score": 7.5
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.51,
+            "semantic_analysis_score": 7.0,
+            "hybrid_relevance_score": 6.25,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 제공된 재무지표와 관련된 정보가 있지만, 매출액 증가율의 이상치에 대한 직접적인 원인은 명확하지 않음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 최신 분기와 관련된 재무지표를 다루고 있어 시간적으로 적합함."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 SK하이닉스의 주요 사업인 반도체와 관련된 정보를 포함하고 있어 사업 영역과 일치함."
+              },
+              "financial_impact": {
+                "score": 5,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적일 수 있으나, 장기적으로는 긍정적인 영향을 미칠 가능성이 있음."
+              },
+              "overall_semantic_score": 7,
+              "reasoning": "뉴스 내용이 SK하이닉스의 재무지표와 관련이 있지만, 매출액 증가율의 이상치에 대한 직접적인 원인은 불분명함. 그러나 사업 영역의 일치성과 시간적 적합성은 긍정적 요소로 작용함."
+            },
+            "news_info": {
+              "title": "Wisereport SK하이닉스 - 기업현황 - 기업모니터",
+              "url": "https://comp.wisereport.co.kr/company/c1010001.aspx?cmp_cd=000660",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 3.12,
+            "semantic_analysis_score": 7.5,
+            "hybrid_relevance_score": 6.19,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 언급된 반도체 불황과 연간 적자는 매출액 증가율에 부정적 영향을 미칠 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 최근 반도체 시장 상황을 반영하고 있으며, 재무지표 측정 시점과 관련이 있음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 에스케이하이닉스의 주요 사업인 메모리 반도체와 직접적으로 관련됨."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "반도체 불황으로 인한 적자는 단기적으로 매출액 증가율에 부정적 영향을 미칠 것으로 예상됨."
+              },
+              "overall_semantic_score": 7.5,
+              "reasoning": "뉴스 내용이 에스케이하이닉스의 현재 재무지표에 영향을 미칠 수 있는 요소들을 포함하고 있으며, 사업 영역과의 일치성도 높음."
+            },
+            "news_info": {
+              "title": "The VC 에스케이하이닉스(메모리 반도체) - 기업정보 - THE VC",
+              "url": "https://thevc.kr/skhynix",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 4.73,
+            "semantic_analysis_score": 3.5,
+            "hybrid_relevance_score": 3.87,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 3,
+                "explanation": "뉴스는 에스케이하이닉스의 기업문화와 고용현황에 대한 정보로, 매출액 증가율에 직접적인 영향을 미치지 않음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스가 최근에 발표되었으나, 매출액 증가율은 과거 4분기 평균과 비교된 것이므로 직접적인 시간적 연결은 약함."
+              },
+              "business_alignment": {
+                "score": 4,
+                "explanation": "뉴스 내용은 회사의 인사 및 근무환경에 관한 정보로, 주요 사업영역인 반도체와는 간접적인 관련성만 있음."
+              },
+              "financial_impact": {
+                "score": 2,
+                "explanation": "뉴스 내용이 재무성과에 미치는 영향은 미미하며, 매출액 증가율의 이상치와는 관련성이 낮음."
+              },
+              "overall_semantic_score": 3.5,
+              "reasoning": "뉴스 내용이 재무지표에 미치는 영향이 적고, 직접적인 인과관계가 부족하여 종합적인 점수가 낮음."
+            },
+            "news_info": {
+              "title": "JobKorea 에스케이하이닉스 2024년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+              "url": "https://www.jobkorea.co.kr/recruit/co_read/c/talentmgnt21",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 5.44,
+          "max_hybrid_score": 6.25,
+          "relevant_news_count": 2
+        }
+      },
+      "search_info": {
+        "final_query": "에스케이하이닉스 매출액증가율 이상치 41.91, 과거 평균 123.86 비교 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 2
+      },
+      "timestamp": "2025-08-14T00:28:51.386652"
+    }
+  ]
+}

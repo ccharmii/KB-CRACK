@@ -1,0 +1,19 @@
+{
+  "company_name": "바이오솔루션",
+  "current_credit_grade": "B-",
+  "corp_code": "00560982",
+  "start_time": "2025-08-14T06:58:32.331332",
+  "output_directory": "analysis_results\\바이오솔루션",
+  "steps_completed": [
+    "non_financial_analysis",
+    "financial_reasoning",
+    "news_analysis",
+    "final_report"
+  ],
+  "steps_failed": [
+    "financial_analysis"
+  ],
+  "latest_quarter": "2025Q1",
+  "end_time": "2025-08-14T07:02:27.136503",
+  "total_duration": "0:03:54.805171"
+}

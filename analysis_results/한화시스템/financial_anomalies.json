@@ -1,0 +1,18 @@
+{
+    "매출액증가율(YoY)": {
+        "type": "peer_comparison",
+        "metric_name": "매출액증가율(YoY)",
+        "description": "26.82로 동종업계 평균인 2.32를 1056.4%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "PER": {
+        "type": "peer_comparison",
+        "metric_name": "PER",
+        "description": "17.22로 동종업계 평균인 80.25를 78.5%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    }
+}

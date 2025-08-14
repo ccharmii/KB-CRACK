@@ -1,0 +1,26 @@
+{
+    "매출액증가율(YoY)": {
+        "type": "peer_comparison",
+        "metric_name": "매출액증가율(YoY)",
+        "description": "21.8로 동종업계 평균인 -21.32를 202.3%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "PER": {
+        "type": "peer_comparison",
+        "metric_name": "PER",
+        "description": "0.0로 동종업계 평균인 18.94를 100.0%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "매출액증가율": {
+        "type": "time_series",
+        "metric_name": "매출액증가율",
+        "description": "21.8로 과거 4분기 평균인 1.19를 벗어나는 이상치 탐지 (표준편차 2.0배 상회)",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "timeseries_analysis"
+    }
+}

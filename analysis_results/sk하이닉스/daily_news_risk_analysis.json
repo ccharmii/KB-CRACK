@@ -1,0 +1,227 @@
+{
+  "analysis_date": "2025-08-13 23:09:25",
+  "company": "에스케이하이닉스(주)",
+  "total_news_count": 19,
+  "financial_anomalies_count": 4,
+  "non_financial_anomalies_count": 4,
+  "company_analysis_summary": {
+    "overall_risk_level": "주의",
+    "total_anomalies": 8,
+    "high_risk_anomalies": 0,
+    "financial_risk_count": 4,
+    "non_financial_risk_count": 4,
+    "financial_characteristics": {
+      "severity_distribution": {
+        "high": 0,
+        "medium": 4,
+        "low": 0
+      },
+      "type_distribution": {
+        "peer_comparison": 3,
+        "time_series": 1,
+        "other": 0
+      },
+      "indicator_types": {
+        "ROE": 1,
+        "매출액증가율(YoY)": 1,
+        "PER": 1,
+        "매출액증가율": 1
+      },
+      "quarters_affected": [
+        "Latest"
+      ],
+      "risk_indicators": [],
+      "total_anomalies": 4
+    },
+    "key_concerns": [
+      "재무: 10.44로 동종업계 평균인 2.95를 253.7%p 상회하여 이상치로 탐지됨",
+      "재무: 41.91로 동종업계 평균인 -4.62를 1007.9%p 상회하여 이상치로 탐지됨",
+      "재무: 0.0로 동종업계 평균인 90.78를 100.0%p 하회하여 이상치로 탐지됨",
+      "재무: 41.91로 과거 4분기 평균인 123.86를 벗어나는 이상치 탐지 (표준편차 2.0배 하회)",
+      "비재무(Unknown): 2025년 1분기 동안 회사는 매출총이익과 영업이익이 크게 증가하여 순이익이 7,625,823백만원에 달했습니다. 이는 이전 분기 대비 상당한 성장을 나타내며, 특히 금융수익이 증가한 것이 주요 요인으로 작용했습니다. 또한, 외환 리스크 관리가 효과적으로 이루어져 환율 변동에 따른 손실을 최소화한 점도 긍정적인 영향을 미쳤습니다. 이러한 요소들이 결합되어 ROE가 동종업계 평균을 크게 초과하는 결과를 초래했습니다."
+    ]
+  },
+  "targeted_news": [
+    {
+      "title": "SK하이닉스 실적",
+      "url": "https://kr.investing.com/equities/sk-hynix-inc-earnings",
+      "content": "SK하이닉스의 주당순이익(TTM)은 얼마인가요? ... SK하이닉스의 EPS(TTM)는 41,850.62입니다. SK하이닉스의 다음 실적 발표일은 언제인가요?",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 실적",
+      "search_date": "2025-08-13 23:08:33"
+    },
+    {
+      "title": "SK하이닉스, 2025년 2분기 경영실적 발표",
+      "url": "https://news.skhynix.co.kr/2q-2025-business-results/",
+      "content": "SK하이닉스는 AI 메모리 수요 증가로 2025년 2분기 매출 22.2조 원, 영업이익 9.2조 원으로 사상 최대 실적을 기록했다. HBM, 낸드 등 고성능 제품 확대와",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 실적",
+      "search_date": "2025-08-13 23:08:33"
+    },
+    {
+      "title": "SK하이닉스(A000660) | Consensus | 기업정보 - 삼성전자",
+      "url": "https://comp.fnguide.com/SVO2/asp/SVD_Consensus.asp?pGB=1&gicode=A000660&cID=&MenuYn=Y&ReportGB=&NewMenuID=108&stkGb=701",
+      "content": "| 20 25/05/27 | [SK하이닉스 A000660]('A000660');)-AI 아키텍처 전환에 따른 구조적 수혜 집중 2025년 하반기 예상 영업이익 20.6조원 투자의견 BUY, 목표주가 26만원 유지 | ![Image 12: 베스트]( | ![Image 13: 베스트]( 260,000 | 204,500 | ![Image 14: 베스트]( 백길현 | | 20 25/05/21 | [SK하이닉스 A000660]('A000660');)-A bigger leap ahead HBM lead should continue to pay off; 1c DRAM transition likely landed softly Switch to net cash position slated for the year; NAND getting increasingly competitive | ![Image 24: 베스트]( | ![Image 25: 베스트]( 280,000 | 204,500 | ![Image 26: 베스트]( 류형근 | | 20 25/05/14 | [SK하이닉스 A000660]('A000660');)-독보적 HBM 점유율 유지 구간 독보적 HBM 시장 점유율 발빠른 선단 공정 램프업으로 시장 독주 지속 | ![Image 33: 베스트]( | ![Image 34: 베스트]( 280,000 | 204,500 | ![Image 35: 베스트]( 손인준 |",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 실적",
+      "search_date": "2025-08-13 23:08:33"
+    },
+    {
+      "title": "기업심층분석 3. SK하이닉스, 재무제표 및 사업보고서",
+      "url": "https://www.jobkorea.co.kr/company/1496894/AnalysisView?Inside_No=12430&page=1",
+      "content": "SK하이닉스 매출은 37조 8,787억 원으로 2021년 41조 5,573억 원에 크게 못 미치는 ... 동종업계 기업홈. 에스케이하이닉스(주) 제이셋스태츠칩팩코리아(유) 에스케이",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 매출",
+      "search_date": "2025-08-13 23:08:35"
+    },
+    {
+      "title": "SK하이닉스",
+      "url": "https://namu.wiki/w/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+      "content": "기업 정보 [ 펼치기 · 접기 ] **기업 규모**대기업 **최대 주주**SK스퀘어 **자회사**SK키파운드리, SK하이닉스시스템아이씨 **상장**유가증권시장 (1996년~ / 000660) **시가총액****202조 7,487억원**(2025년7월 3일) **편입지수**코스피 KRX100 KOSPI200 **부채**46조 8,260억원 (2023년 연결) **자본금**53조 5,040억원 (2023년 연결) **매출액**66조 1,930억원 (2024년 연결) **영업이익**23조 4,673억원 (2024년 연결) **순이익**19조 7,969억원 (2024년 연결) **직원 수**32,065명 (2023년 연결) **신용등급**S&P(BBB- / 2023년 12월) 무디스(Baa2 / 2023년 12월) 피치 \"피치(신용평가회사)\")(BBB / 2023년 4월) 2024년 중국 반도체 굴기 등의 요인으로 인해 메모리반도체 시장 전반이 연초의 장밋빛 전망 대비 상당히 부진하면서 SK하이닉스 역시 연 초중반의 강한 시세를 유지하지는 못하였으나, HBM 분야의 경쟁력 우위를 바탕으로 메모리반도체 3사 중에서는 실적 및 주가 측면에서 가장 선방할 수 있었다.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 매출",
+      "search_date": "2025-08-13 23:08:35"
+    },
+    {
+      "title": "[PDF] SK 하이닉스 더 큰 도약의 기회",
+      "url": "https://money2.daishin.com/PDF/Out/intranet_data/Product/ResearchCenter/Report/2025/05/53697_20250520_SKH1.pdf",
+      "content": "ROE. -15.6. 31.1. 35.0. 26.0. 20.8. 주: EPS와 BPS, ROE는 지배지분 기준으로 산출. 자료: SK하이닉스, 대신증권 Research Center. KOSPI. 2,603.42.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) ROE",
+      "search_date": "2025-08-13 23:08:37"
+    },
+    {
+      "title": "[PDF] SK 하이닉스 새로운 역사의 시작",
+      "url": "https://stock.pstatic.net/stock-research/company/2/20250618_company_691745000.pdf",
+      "content": "ROE. -15.6. 31.1. 34.6. 25.9. 20.1. 주: EPS와 BPS, ROE는 지배지분 기준으로 산출. 자료: SK하이닉스, 대신증권 Research Center. KOSPI. 2,950.30.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) ROE",
+      "search_date": "2025-08-13 23:08:37"
+    },
+    {
+      "title": "SK하이닉스 - 컨센서스 - 기업모니터",
+      "url": "https://comp.wisereport.co.kr/company/c1050001.aspx?cmp_cd=000660&cn=",
+      "content": "밴드차트. 주재무제표, K-IFRS(별도), K-IFRS(연결), K-GAAP(개별), K-GAAP(연결). 검색 ... ROE(%), 2025/12, 34.72, 34.76, 34.73, 33.80, 32.53. * IFRS 연결 기업의 당기",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) ROE",
+      "search_date": "2025-08-13 23:08:37"
+    },
+    {
+      "title": "KRX:000660 - 에스케이하이닉스보통주 - 트레이딩뷰",
+      "url": "https://kr.tradingview.com/symbols/KRX-000660/",
+      "content": "000660의 현재 값은 277,500 KRW 입니다 - 지난 24시간 사이 0.75% 올랐습니다. 에스케이하이닉스보통주의 주가 성능을 더 자세히 살펴보려면 차트를 확인하세요.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 주가",
+      "search_date": "2025-08-13 23:08:38"
+    },
+    {
+      "title": "SK하이닉스(000660)의 실시간 주가를 확인해보세요",
+      "url": "https://tossinvest.com/stocks/A000660/order",
+      "content": "SK하이닉스(000660) 주가는 278000원입니다. 실시간 차트/호가, 종목정보, 커뮤니티 반응까지 토스증권에서 더 자세히 확인해보세요.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 주가",
+      "search_date": "2025-08-13 23:08:38"
+    },
+    {
+      "title": "SK하이닉스 소액주주토론방, 주주동호회 , 주가, 주식차트 ...",
+      "url": "https://www.38.co.kr/html/forum/board/?code=000660",
+      "content": "SK하이닉스 소액주주 토론방, 주주동호회,소액주주모임 SK하이닉스의 장외주식 시세.주가.거래.종목분석.공모.IPO.비상장주식매매.SK하이닉스 ... 728,002,365 주, 액면가",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 주가",
+      "search_date": "2025-08-13 23:08:38"
+    },
+    {
+      "title": "SK하이닉스 - 기업개요",
+      "url": "https://comp.wisereport.co.kr/company/c1020001.aspx?cmp_cd=000660&cn=",
+      "content": "에스케이하이닉스시스템아이씨㈜, 반도체 연구개발 및 서비스, 2017/05, 1,059,967,000. SK hynix America Inc. 반도체 판매, 1983/03, 9,315,588,000. SK hynix",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주)",
+      "search_date": "2025-08-13 23:08:41"
+    },
+    {
+      "title": "SK하이닉스 - 위키백과, 우리 모두의 백과사전",
+      "url": "https://ko.wikipedia.org/wiki/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+      "content": "SK하이닉스주식회사(영어: SK hynix)는 대한민국의 메모리 반도체 설계, 제조 기업으로 종합 세계 1위의 DRAM과 낸드플래시(ROM) 제조 기업이다. 본사는 경기도 이천시",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주)",
+      "search_date": "2025-08-13 23:08:41"
+    },
+    {
+      "title": "흥국證 \"SK하이닉스, 밸류에이션 눈높이 높아질 것…목표 ...",
+      "url": "https://www.ajunews.com/view/20250630083412160",
+      "content": "흥국증권이 30일 SK하이닉스 밸류에이션에 대한 시장의 눈높이가 계속 향상될 것으로 전망하며 목표주가를 기존 28만원에서 35만원으로 25% 상향했다.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 밸류에이션",
+      "search_date": "2025-08-13 23:08:43"
+    },
+    {
+      "title": "SK하이닉스 (000660)",
+      "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application/pdf&inlineYn=Y&saveKey=research.pdf&fileName=2010/2025062507085276K_02_04.pdf",
+      "content": "(다음 페이지에 계속) ▶ 종목 정보 BUY 목표주가 340,000원 22.1% 현재주가 278,500원 시가총액 202.7조원 주식수 (유동주식 비중) 728,002,365주 (74.4%) 52주 최저/최고 152,800원/278,500원 60일-평균거래대금 7,159.3억원 ▶ 수익률 1개월 6개월 12개월 SK하이닉스 (%) 39.3 65.3 24.9 Kospi 지수 대비 (%pts) 16.3 30.0 11.3 ▶ 주요 전망치 변화 (원) 신규 기존 증감 투자의견 BUY BUY 목표주가 340,000 250,000 36.0% 2024E EPS 40,528 42,378 -4.4% 2025E EPS 49,036 43,567 12.6% ▶ 컨센서스 커버 증권사 수 26 목표주가 277,846 추천 점수 4.0 ※ 추천점수: 4 이상 → BUY, 3 → HOLD, 2 이하 → SELL Tech팀 이종욱 팀장 jwstar.lee@samsung.com 장민승 Research Associate minseung.jang@samsung.com COMPANY UPDATE SUMMARY FINANCIAL DATA 2023 2024 2025E 2026E 매출액 (십억원) 32,766 66,193 83,712 99,327 영업이익 (십억원) -7,730 23,467 36,289 46,021 순이익 (십억원) -9,138 19,797 29,517 35,713 EPS (adj) (원) -12,517 27,182 40,528 49,036 EPS (adj) growth (%) 적전 흑전 49.1 21.0 EBITDA margin (%) 18.1 54.5 61.6 64.5 ROE (%) -15.6 31.1 33.6 30.0 P/E (adj) (배) n/a 6.4 6.9 5.7 P/B (배) 1.8 1.6 1.9 1.4 EV/EBITDA (배) 21.7 3.9 3.9 2.8 Dividend yield (%) 0.8 1.3 0.5 0.9 자료: SK하이닉스, 삼성증권 추정 2025.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 밸류에이션",
+      "search_date": "2025-08-13 23:08:43"
+    },
+    {
+      "title": "SK하이닉스(000660) - 투자지표",
+      "url": "https://www.valueline.co.kr/finance/investment/000660",
+      "content": "SK하이닉스. 000660 코스피. 256,500 5,500 (-2.1%). 기준 : 08/08.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 밸류에이션",
+      "search_date": "2025-08-13 23:08:43"
+    },
+    {
+      "title": "SK하이닉스 - 투자지표 - 수익성 - 기업모니터",
+      "url": "https://comp.wisereport.co.kr/company/c1040001.aspx?cmp_cd=000660&cn=",
+      "content": "| SK하이닉스000660홈페이지대표전화주소EPS27,182BPS107,256PER7.38업종PER9.86PBR1.87현금배당수익률1.10%전일종가200,500도움말KOSPI : 코스피 전기·전자|WI26 : 반도체|12월 결산|K200|NXT | SK하이닉스000660홈페이지대표전화주소 | EPS27,182BPS107,256PER7.38업종PER9.86PBR1.87현금배당수익률1.10%전일종가200,500도움말 | KOSPI : 코스피 전기·전자|WI26 : 반도체|12월 결산|K200|NXT | SK하이닉스000660홈페이지대표전화주소 | EPS27,182BPS107,256PER7.38업종PER9.86PBR1.87현금배당수익률1.10%전일종가200,500도움말 *PER: 전일자 보통주 수정주가 / 최근결산 EPS*PBR: 전일자 보통주 수정주가 / 최근결산 BPS*현금배당수익률: 최근 결산 수정DPS(현금) / 전일자 보통주 수정주가* PER, PBR값이 (-)일 경우, N/A로 표기됩니다. SK하이닉스000660홈페이지대표전화주소 | EPS27,182BPS107,256PER7.38업종PER9.86PBR1.87현금배당수익률1.10%전일종가200,500도움말 ROE | (지배주주지분)당기순이익[당기]/((지배주주지분)자본총계[당기]+(지배주주지분)자본총계[전기])/2) ROA | 당기순이익[당기]/(자산총계[당기]+자산총계[전기]/2) 성장성 | 매출액증가율 | (매출액(수익)[당기]-매출액(수익)[전기])/매출액(수익)[전기] 자기자본증가율 | (자본총계[당기]-자본총계[전기])/자본총계[전기] 활동성 | 총자산회전율 | 매출액(수익)[당기]/(자산총계[당기]+자산총계[전기]/2) 자기자본회전율 | 매출액(수익)[당기]/((자기자본[당기]+자기자본[전기])/2) 순운전자본회전율 | 매출액(수익)[당기]/((순운전자본[당기]+순운전자본[전기])/2) 유형자산회전율 | 매출액(수익)[당기]/((유형자산[당기]+유형자산[전기])/2) 매출채권회전율 | 매출액(수...",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 수익성",
+      "search_date": "2025-08-13 23:08:45"
+    },
+    {
+      "title": "SK하이닉스 (A000660) 1년 총 수익 - Investing.com - 인베스팅닷컴",
+      "url": "https://kr.investing.com/pro/KOSE:A000660/explorer/asset_price_return_1y",
+      "content": "SK하이닉스의 1년 총 수익은/는 26.3%입니다.. SK하이닉스의 1년 총 수익 동향, 차트 등을 표시합니다.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 수익성",
+      "search_date": "2025-08-13 23:08:45"
+    },
+    {
+      "title": "SK하이닉스, 창사 첫 영업이익 1위…삼성전자 '수익성 쇼크'에 2년 ...",
+      "url": "http://www.newsroad.co.kr/news/articleView.html?idxno=40584",
+      "content": "SK하이닉스는 전년도 4.6조원의 영업적자에서 무려 21.3조원의 흑자로 전환하며 단숨에 영업이익 1위 자리에 올랐다.",
+      "published_date": "",
+      "search_keyword": "에스케이하이닉스(주) 수익성",
+      "search_date": "2025-08-13 23:08:45"
+    }
+  ],
+  "daily_risk_summary": {
+    "analysis_date": "2025-07-03",
+    "company_name": "SK하이닉스",
+    "total_risk_news": 1,
+    "high_risk_count": 0,
+    "medium_risk_count": 1,
+    "key_risk_summary": "SK하이닉스는 2025년 2분기 사상 최대 실적을 기록했으나, PER이 0.0으로 나타나 주가 급락과 투자 심리 악화를 시사합니다. 이는 재무 이상치와 결합하여 중간 수준의 신용위험을 나타냅니다.",
+    "risk_news_items": [
+      {
+        "title": "SK하이닉스, 2025년 2분기 경영실적 발표",
+        "content_summary": "SK하이닉스는 AI 메모리 수요 증가로 2025년 2분기 매출 22.2조 원, 영업이익 9.2조 원으로 사상 최대 실적을 기록했다.",
+        "url": "https://news.skhynix.co.kr/2q-2025-business-results/",
+        "risk_category": "복합위험",
+        "risk_level": 6,
+        "evidence_basis": "PER이 0.0으로 주가 급락을 시사하며, 이는 투자 심리 악화와 관련이 있습니다. 사상 최대 실적에도 불구하고 주가 하락은 재무적 불안정성을 나타낼 수 있습니다.",
+        "anomaly_connection": "PER의 이상치가 주가 급락을 시사하며, 이는 재무구조 악화와 관련된 위험을 내포합니다.",
+        "published_date": "2025-07-03"
+      }
+    ],
+    "credit_assessment": {
+      "current_grade": "BB+",
+      "predicted_grade": "BB+",
+      "change_probability": 0.3,
+      "change_direction": "유지",
+      "reasoning": "현재의 재무 이상치와 뉴스에서 나타난 주가 급락은 신용등급에 부정적 영향을 미칠 수 있으나, 사상 최대 실적이 이를 상쇄하여 등급 유지가 예상됩니다."
+    }
+  },
+  "daily_summary_report": "# 일일 신용위험 분석 리포트\n\n## 📊 분석 개요\n- **분석 날짜**: 2025-07-03\n- **기업명**: SK하이닉스\n- **위험 뉴스 총 개수**: 1개\n- **고위험 뉴스**: 0개 (위험도 7-10)\n- **중위험 뉴스**: 1개 (위험도 5-6)\n\n## 🚨 주요 위험 요약\nSK하이닉스는 2025년 2분기 사상 최대 실적을 기록했으나, PER이 0.0으로 나타나 주가 급락과 투자 심리 악화를 시사합니다. 이는 재무 이상치와 결합하여 중간 수준의 신용위험을 나타냅니다.\n\n## 📈 신용등급 평가\n- **현재 추정 등급**: BB+\n- **예상 등급**: BB+\n- **변경 확률**: 30.0%\n- **변경 방향**: 유지\n\n### 등급 평가 근거\n현재의 재무 이상치와 뉴스에서 나타난 주가 급락은 신용등급에 부정적 영향을 미칠 수 있으나, 사상 최대 실적이 이를 상쇄하여 등급 유지가 예상됩니다.\n\n## 🔍 위험 뉴스 상세 분석\n\n### 1. ⚠️ SK하이닉스, 2025년 2분기 경영실적 발표\n\n**위험도**: 6/10 (복합위험)\n**내용 요약**: SK하이닉스는 AI 메모리 수요 증가로 2025년 2분기 매출 22.2조 원, 영업이익 9.2조 원으로 사상 최대 실적을 기록했다.\n\n**위험 판단 근거**: PER이 0.0으로 주가 급락을 시사하며, 이는 투자 심리 악화와 관련이 있습니다. 사상 최대 실적에도 불구하고 주가 하락은 재무적 불안정성을 나타낼 수 있습니다.\n\n**이상치 연관성**: PER의 이상치가 주가 급락을 시사하며, 이는 재무구조 악화와 관련된 위험을 내포합니다.\n\n**발행일**: 2025-07-03\n**링크**: [https://news.skhynix.co.kr/2q-2025-business-results/](https://news.skhynix.co.kr/2q-2025-business-results/)\n\n---\n\n## 📋 분석 결론\nSK하이닉스의 2025-07-03 신용위험 분석 결과, 총 1개의 위험 뉴스가 탐지되었습니다. \n\n신용등급은 현재 BB+등급에서 BB+등급으로 유지할 확률이 30.0%입니다.\n\n지속적인 모니터링을 통해 신용위험 변화를 추적하는 것이 중요합니다.\n\n---\n*분석 시점: 2025-08-13 23:09:25*\n",
+  "analysis_basis": "detected_anomalies"
+}

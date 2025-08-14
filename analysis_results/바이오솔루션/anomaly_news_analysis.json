@@ -1,0 +1,555 @@
+{
+  "success": true,
+  "analysis_method": "hybrid_relevance_check",
+  "methodology": {
+    "cosine_similarity_weight": 0.3,
+    "llm_semantic_weight": 0.7,
+    "relevance_threshold": 6.0,
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "company_info": {
+    "기업명": "주식회사 바이오솔루션",
+    "영문기업명": "Bio Solution Co.,Ltd.",
+    "종목코드": "086820",
+    "대표자명": "이정선",
+    "법인구분": "K",
+    "법인등록번호": "1301110057421",
+    "사업자등록번호": "1248169186",
+    "주소": "서울특별시 노원구 공릉로 232 5층 (공릉동, 서울테크노파크)",
+    "업종코드": "211",
+    "설립일": "20000114",
+    "결산월": "12",
+    "업종": "기초 의약물질 제조업",
+    "제품군": "세포치료제, 인체조직모델 등",
+    "Current_credit_grade": "B-"
+  },
+  "analysis_summary": {
+    "total_anomalies": 3,
+    "successful_analyses": 3,
+    "analysis_timestamp": "2025-08-14T07:00:06.815339"
+  },
+  "anomaly_news_analyses": [
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율(YoY)",
+        "description": "21.8로 동종업계 평균인 -21.32를 202.3%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "바이오솔루션의 매출 증가가 업계 평균을 크게 초과함.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 국내 바이오산업 매출이 연평균 13.2% 성장하고 있음.",
+          "뉴스 2: 바이오솔루션의 PER 및 PBR 지표가 업종 평균과 비교하여 높은 수준임.",
+          "뉴스 3: 바이오솔루션이 줄기세포 기반 치료제 및 바이오기술 분야에서 리딩 기업으로 자리잡고 있음."
+        ],
+        "detailed_explanation": "바이오솔루션은 줄기세포 기반 치료제 및 인체조직모델 등 다양한 바이오기술 분야에서 활발한 연구개발을 진행하고 있으며, 이는 매출 증가에 기여하고 있습니다. 또한, 국내 바이오산업이 전반적으로 성장하고 있는 가운데, 바이오솔루션이 그 성장의 혜택을 보고 있는 것으로 보입니다. 업계 평균과 비교할 때, 바이오솔루션의 매출 증가율이 두드러지게 나타나고 있습니다.",
+        "news_sources": [
+          "https://www.bioin.or.kr/board.do?num=327949&cmd=view&bid=industry",
+          "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820"
+        ],
+        "impact_assessment": "바이오솔루션의 매출 증가가 지속된다면, 회사의 시장 점유율과 투자자 신뢰도가 높아질 것으로 예상됨.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통해 뉴스의 관련성이 높게 평가됨."
+      },
+      "news_evidence": [
+        {
+          "title": "Bioin 바이오산업 매출 및 국내시장 현황과 전망",
+          "url": "https://www.bioin.or.kr/board.do?num=327949&cmd=view&bid=industry",
+          "content": "바이오산업 매출 및 국내시장 현황과 전망◈본문1. 들어가며국내 바이오산업 실태조사에 따르면, 국내 바이오산업 매출 규모는 2019년 12조 6,586억원에서 2023년 20조 7,546억원으로 연평균 13.2% 성장 하였고 국내시장 규모는 2019년",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.72,
+          "cosine_score": 7.66,
+          "semantic_score": 7.75
+        },
+        {
+          "title": "Company Guide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+          "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820",
+          "content": "PER(Price Earning Ratio)전일자 보통주 수정주가 / 최근 결산 EPS(주당순이익)  * 최근결산은 2024/12 (연간) 기준임.PER)-12M PER 전일자 보통주 수정주가 / 12개월 Forward EPS12M PER)-업종 PER 시장대표업종||SUM(구성종목 시가총액)/SUM(구성종목 당기순이익) * 전일자 보통주 시가총액 기준 * 당기순이익은 최근결산 2024/12 (연간) 기준임.업종 PER)868.27 PBR(Price Book-value Ratio)전일자 보통주 수정주가 / 최근 결산기 BPS(주당순자산)  * 최근결산은 2024/12 (연간) 기준임.PBR)7.46 배당수익률{최근 결산기 보통주 DPS(현금, 무상조정) / 전일자 보통주 수정주가} *100 1.24 Image 2: 외국인 지분율,시가총액 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")   유동주식수 = 지수산정주식수-(최대주주등(본인+특별관계자)+우리사주+자사주+보호예수+정부기관(5%이상)+해외DR).유동주식수/비율)(보통주) | 19,449,012 / 80.20 | 거래량/거래대금(NXT)(억원) | - | Image 4: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 6: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 11: 대차잔고비중 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.34,
+          "cosine_score": 5.95,
+          "semantic_score": 6.5
+        },
+        {
+          "title": "Biosolutions 바이오솔루션 Biosolution",
+          "url": "https://biosolutions.co.kr/",
+          "content": "카티라이프, 케라힐 등 줄기세포 기반 치료제, 인체조직모델, 화장품원료 연구개발 및 제조, 세포기반 바이오기술 리딩기업",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.62,
+          "cosine_score": 2.39,
+          "semantic_score": 7.0
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 7.66,
+            "semantic_analysis_score": 7.75,
+            "hybrid_relevance_score": 7.72,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 바이오산업의 전반적인 성장세가 회사의 매출 증가에 긍정적인 영향을 미칠 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 최근 바이오산업의 매출 현황을 다루고 있어, 재무지표 측정 시점과 잘 연결됨."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 바이오산업에 대한 전반적인 분석을 포함하고 있어, 회사의 주요 사업영역과 밀접하게 관련됨."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스가 바이오산업의 성장 전망을 제시함에 따라, 회사의 매출 증가에 긍정적인 영향을 미칠 것으로 예상됨."
+              },
+              "overall_semantic_score": 7.75,
+              "reasoning": "뉴스 내용이 바이오산업의 성장과 관련된 긍정적인 전망을 제시하고 있으며, 이는 회사의 매출 증가율에 긍정적인 영향을 미칠 것으로 판단됨."
+            },
+            "news_info": {
+              "title": "Bioin 바이오산업 매출 및 국내시장 현황과 전망",
+              "url": "https://www.bioin.or.kr/board.do?num=327949&cmd=view&bid=industry",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.95,
+            "semantic_analysis_score": 6.5,
+            "hybrid_relevance_score": 6.34,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 언급된 PER과 PBR 지표는 매출액 증가율에 간접적인 영향을 미칠 수 있으나, 직접적인 인과관계는 명확하지 않음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 2024년 결산 기준으로 작성되었으며, 최근 분기 재무지표와 시간적으로 연결됨."
+              },
+              "business_alignment": {
+                "score": 7,
+                "explanation": "뉴스 내용이 바이오솔루션의 재무지표와 관련된 투자 정보로, 회사의 주요 사업영역과 관련성이 있음."
+              },
+              "financial_impact": {
+                "score": 5,
+                "explanation": "뉴스가 매출액 증가율에 미치는 영향은 제한적이며, 단기적인 재무성과에 큰 영향을 주지 않을 것으로 예상됨."
+              },
+              "overall_semantic_score": 6.5,
+              "reasoning": "뉴스 내용이 재무지표와 관련이 있으나, 직접적인 인과관계는 약하고, 재무성과에 미치는 영향도 제한적임."
+            },
+            "news_info": {
+              "title": "Company Guide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+              "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 2.39,
+            "semantic_analysis_score": 7.0,
+            "hybrid_relevance_score": 5.62,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 줄기세포 기반 치료제와 바이오기술이 매출 증가에 긍정적인 영향을 미칠 가능성이 있음"
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스 시점이 최근 분기와 관련이 있을 것으로 보이나, 구체적인 날짜 정보가 부족함"
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 바이오솔루션의 주요 사업영역인 줄기세포 및 바이오기술과 밀접하게 관련됨"
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스가 긍정적인 시장 반응을 유도할 수 있으며, 매출 증가에 기여할 가능성이 있음"
+              },
+              "overall_semantic_score": 7,
+              "reasoning": "뉴스 내용이 회사의 사업과 관련이 깊고, 매출 증가에 긍정적인 영향을 미칠 것으로 예상되지만, 시간적 적합성에 대한 정보가 부족하여 점수를 조정함"
+            },
+            "news_info": {
+              "title": "Biosolutions 바이오솔루션 Biosolution",
+              "url": "https://biosolutions.co.kr/",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 6.56,
+          "max_hybrid_score": 7.72,
+          "relevant_news_count": 2
+        }
+      },
+      "search_info": {
+        "final_query": "\"바이오솔루션 매출액증가율 이상치 21.8 동종업계 평균 비교 뉴스\"",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T06:59:05.125534"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "PER",
+        "description": "0.0로 동종업계 평균인 18.94를 100.0%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "바이오솔루션의 순이익이 부재하여 PER이 0.0으로 나타남.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 바이오솔루션이 임상 3상에서 긍정적인 결과를 보였지만, 아직 수익으로 이어지지 않음.",
+          "뉴스 2: 제약·바이오 업종의 평균 PER이 높지만, 바이오솔루션은 순이익이 없어서 PER이 0.0임.",
+          "뉴스 3: PER 계산에 사용되는 EPS가 부정적이거나 0일 가능성이 있음."
+        ],
+        "detailed_explanation": "바이오솔루션은 현재 임상 시험에서 긍정적인 결과를 보이고 있지만, 이로 인해 발생하는 수익이 아직 실현되지 않아 순이익이 0으로 나타나고 있습니다. PER은 주가를 순이익으로 나눈 값이기 때문에, 순이익이 0일 경우 PER은 0.0으로 계산됩니다. 이는 동종업계 평균 PER과 큰 차이를 보이며, 향후 수익 실현 여부에 따라 PER이 개선될 가능성이 있습니다.",
+        "news_sources": [
+          "https://www.medipana.com/article/view.php?news_idx=325277",
+          "https://www.press9.kr/news/articleView.html?idxno=51472"
+        ],
+        "impact_assessment": "현재 PER이 0.0인 것은 투자자들에게 부정적인 신호로 작용할 수 있으며, 회사의 재무 건전성에 대한 우려를 불러일으킬 수 있습니다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통해 뉴스의 관련성이 높게 평가됨."
+      },
+      "news_evidence": [
+        {
+          "title": "Medipana 바이오솔루션 \"'카티라이프' 3상 순항…내년 최종 결과 제출\"",
+          "url": "https://www.medipana.com/article/view.php?news_idx=325277",
+          "content": "[메디파나뉴스 = 조해진 기자] 바이오솔루션이 연골세포치료제 '카티라이프(CartiLife)' 임상에서 긍정적 결과를 이끌어내고 있다 . 국내 임상 3상 48주 중간 통계 분석에서 치료 개선 효과를 확인한 것이다.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.6,
+          "cosine_score": 5.08,
+          "semantic_score": 7.25
+        },
+        {
+          "title": "PRESS9 코스닥 Top150 평균 PER 37배, 제약·바이오 70배 - PRESS9",
+          "url": "https://www.press9.kr/news/articleView.html?idxno=51472",
+          "content": "May 3, 2022 - [프레스나인] 코스닥 시가총액 상위 150위권 내 바이오헬스(제약, 진단·기기 포함) 종목의 평균 주가수익비율( PER )은 70배 이상인 것으로 나타났다. 타업종(28배 이상)보다 2배 이상 높았다.PER는 주가를 순이익으로 나눈 것으로,",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.26,
+          "cosine_score": 5.69,
+          "semantic_score": 6.5
+        },
+        {
+          "title": "Company Guide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+          "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820",
+          "content": "PER(Price Earning Ratio)전일자 보통주 수정주가 / 최근 결산 EPS(주당순이익)  * 최근결산은 2024/12 (연간) 기준임.PER)-12M PER 전일자 보통주 수정주가 / 12개월 Forward EPS12M PER)-업종 PER 시장대표업종||SUM(구성종목 시가총액)/SUM(구성종목 당기순이익) * 전일자 보통주 시가총액 기준 * 당기순이익은 최근결산 2024/12 (연간) 기준임.업종 PER)868.27 PBR(Price Book-value Ratio)전일자 보통주 수정주가 / 최근 결산기 BPS(주당순자산)  * 최근결산은 2024/12 (연간) 기준임.PBR)7.46 배당수익률{최근 결산기 보통주 DPS(현금, 무상조정) / 전일자 보통주 수정주가} *100 1.24 Image 2: 외국인 지분율,시가총액 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")   유동주식수 = 지수산정주식수-(최대주주등(본인+특별관계자)+우리사주+자사주+보호예수+정부기관(5%이상)+해외DR).유동주식수/비율)(보통주) | 19,449,012 / 80.20 | 거래량/거래대금(NXT)(억원) | - | Image 4: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 6: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 11: 대차잔고비중 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.96,
+          "cosine_score": 5.87,
+          "semantic_score": 6.0
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 5.08,
+            "semantic_analysis_score": 7.25,
+            "hybrid_relevance_score": 6.6,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 '카티라이프'의 긍정적인 임상 결과는 향후 매출 증가로 이어질 가능성이 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스가 발표된 시점이 최근 분기와 일치하여 재무지표에 영향을 미칠 수 있는 시점으로 적합."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 바이오솔루션의 주요 사업인 연골세포치료제와 직접적으로 관련됨."
+              },
+              "financial_impact": {
+                "score": 5,
+                "explanation": "단기적으로는 PER이 0.0으로 낮지만, 긍정적인 임상 결과가 장기적으로 재무성과에 긍정적 영향을 미칠 가능성이 있음."
+              },
+              "overall_semantic_score": 7.25,
+              "reasoning": "뉴스 내용이 회사의 핵심 사업과 관련이 있으며, 긍정적인 임상 결과가 향후 재무성과에 긍정적인 영향을 미칠 것으로 예상되지만, 현재 PER이 0.0인 점은 단기적인 재무성과에 부정적 영향을 미치고 있음."
+            },
+            "news_info": {
+              "title": "Medipana 바이오솔루션 \"'카티라이프' 3상 순항…내년 최종 결과 제출\"",
+              "url": "https://www.medipana.com/article/view.php?news_idx=325277",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 5.69,
+            "semantic_analysis_score": 6.5,
+            "hybrid_relevance_score": 6.26,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 언급된 PER 수치가 업계 평균보다 높은 점은 바이오솔루션의 PER이 0.0인 것과 대조적이며, 이는 투자자들의 신뢰도에 영향을 미칠 수 있다."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점이 2022년 5월이며, 재무지표는 최신 분기 기준으로 측정되었으나, 두 시점 간의 직접적인 연결은 명확하지 않다."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 제약 및 바이오 산업에 대한 것으로, 바이오솔루션의 주요 사업영역과 관련이 깊다."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "업계 평균 PER과의 차이는 투자자들의 인식에 영향을 미칠 수 있으며, 이는 장기적으로 재무성과에 영향을 줄 가능성이 있다."
+              },
+              "overall_semantic_score": 6.5,
+              "reasoning": "뉴스와 재무지표 간의 연관성이 존재하나, 직접적인 인과관계는 약하며, 시간적 적합성은 다소 부족하다."
+            },
+            "news_info": {
+              "title": "PRESS9 코스닥 Top150 평균 PER 37배, 제약·바이오 70배 - PRESS9",
+              "url": "https://www.press9.kr/news/articleView.html?idxno=51472",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.87,
+            "semantic_analysis_score": 6.0,
+            "hybrid_relevance_score": 5.96,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스에서 PER에 대한 설명이 있지만, 특정 사건이나 변화가 언급되지 않아 직접적인 영향은 미미함."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 2024년 결산 기준으로 작성되어 있으며, 최신 분기 재무지표와 시간적으로 연결됨."
+              },
+              "business_alignment": {
+                "score": 7,
+                "explanation": "뉴스 내용이 바이오솔루션의 재무지표와 관련된 정보로, 회사의 사업 영역과 관련성이 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적이며, PER이 0.0인 상황에서 긍정적인 변화가 필요함."
+              },
+              "overall_semantic_score": 6,
+              "reasoning": "뉴스는 재무지표에 대한 설명을 포함하고 있으나, 직접적인 사건이나 변화가 없기 때문에 인과관계는 약함. 그러나 시간적 적합성과 사업 영역의 관련성은 긍정적."
+            },
+            "news_info": {
+              "title": "Company Guide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+              "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 6.27,
+          "max_hybrid_score": 6.6,
+          "relevant_news_count": 2
+        }
+      },
+      "search_info": {
+        "final_query": "\"바이오솔루션 PER 이상치 0.0 동종업계 평균 18.94 비교 뉴스\"",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T06:59:37.780844"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율",
+        "description": "21.8로 과거 4분기 평균인 1.19를 벗어나는 이상치 탐지 (표준편차 2.0배 상회)",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "time_series",
+        "source": "timeseries_analysis"
+      },
+      "analysis": {
+        "primary_cause": "세포치료제 시장의 확대와 인증 획득으로 인한 매출 증가",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 2025년 1분기 전년동기 대비 별도기준 매출액은 21.8% 증가",
+          "뉴스 1: 세포치료제 분야의 화상치료제와 관절치료제 시장이 확대되고 있음",
+          "뉴스 1: 인체조직모델의 OECD·ISO 인증으로 모델 판매와 대체시험이 가능해짐"
+        ],
+        "detailed_explanation": "바이오솔루션의 매출액 증가율이 과거 평균을 크게 초과한 것은 세포치료제 분야의 시장 확대와 관련이 깊습니다. 특히, 화상치료제와 관절치료제의 수요 증가가 매출에 긍정적인 영향을 미쳤습니다. 또한, 인체조직모델의 인증 획득은 새로운 판매 기회를 창출하여 매출 성장을 더욱 촉진시켰습니다.",
+        "news_sources": [
+          "https://asp01.fnguide.com/SVO2/ASP/SVD_Main.asp?MenuYn=Y&NewMenuID=Y&ReportGB=B&cID=50&gicode=A086820&pGB=1&stkGb=770",
+          "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820"
+        ],
+        "impact_assessment": "매출 증가가 지속될 경우, 회사의 재무 건전성이 향상되고 투자자 신뢰도가 높아질 것으로 예상됨.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 6.36/10"
+      },
+      "news_evidence": [
+        {
+          "title": "Fnguide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+          "url": "https://asp01.fnguide.com/SVO2/ASP/SVD_Main.asp?MenuYn=Y&NewMenuID=Y&ReportGB=B&cID=50&gicode=A086820&pGB=1&stkGb=770",
+          "content": "2025년 1분기 전년동기 대비 별도기준 매출액은 21.8% 증가 , 영업손실은 47.5% 감소, 당기순손실은 30.5% 감소. 세포치료제 분야의 화상치료제와 관절치료제 시장이 확대되고, 인체조직모델의 OECD·ISO 인증으로 모델 판매와 대체시험",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 8.04,
+          "cosine_score": 6.98,
+          "semantic_score": 8.5
+        },
+        {
+          "title": "Company Guide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+          "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820",
+          "content": "PER(Price Earning Ratio)전일자 보통주 수정주가 / 최근 결산 EPS(주당순이익)  * 최근결산은 2024/12 (연간) 기준임.PER)-12M PER 전일자 보통주 수정주가 / 12개월 Forward EPS12M PER)-업종 PER 시장대표업종||SUM(구성종목 시가총액)/SUM(구성종목 당기순이익) * 전일자 보통주 시가총액 기준 * 당기순이익은 최근결산 2024/12 (연간) 기준임.업종 PER)868.27 PBR(Price Book-value Ratio)전일자 보통주 수정주가 / 최근 결산기 BPS(주당순자산)  * 최근결산은 2024/12 (연간) 기준임.PBR)7.46 배당수익률{최근 결산기 보통주 DPS(현금, 무상조정) / 전일자 보통주 수정주가} *100 1.24 Image 2: 외국인 지분율,시가총액 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")   유동주식수 = 지수산정주식수-(최대주주등(본인+특별관계자)+우리사주+자사주+보호예수+정부기관(5%이상)+해외DR).유동주식수/비율)(보통주) | 19,449,012 / 80.20 | 거래량/거래대금(NXT)(억원) | - | Image 4: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 6: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 11: 대차잔고비중 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.63,
+          "cosine_score": 5.94,
+          "semantic_score": 5.5
+        },
+        {
+          "title": "JobKorea ㈜바이오솔루션 2025년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+          "url": "https://www.jobkorea.co.kr/recruit/co_read/c/biosolution",
+          "content": "㈜바이오솔루션 2025년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아  Image 1: ㈜바이오솔루션 기업 상세 정보| 산업 | 생물학적 제제 제조업 | 사원수 | 6명 (2018.10.18) | | 4대보험 | 국민연금, 건강보험, 고용보험, 산재보험 | 홈페이지 | http://www.bio-solution.co.kr | 2021년 매출액  2021년 영업이익  2021년 당기순이익 최근 3년 기준 최근 3년 기준 잡코리아 고객센터 (T. | 비 영업 이익 | 64,764 | 65,364 | 128,332 | | 영업 이익 증가 율 | 80.08% | - | - | | 영업 이익 율 | 26.73% | 18.71% | -10.17% | | 현금 영업 이익 | 204,769 | 163,793 | 10,864 | 상기 정보는 나이스 기업정보 제공받은 것으로, 본 자료를 이용한 판단 및 행위 결과에 대해 책임지지 않습니다. 자료수정 및 정정문의|NICE평가정보㈜ (02-3771-1514, E. 잡코리아 기타 정보",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.41,
+          "cosine_score": 4.62,
+          "semantic_score": 5.75
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 6.98,
+            "semantic_analysis_score": 8.5,
+            "hybrid_relevance_score": 8.04,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 매출 증가와 영업 손실 감소는 직접적으로 매출액 증가율에 긍정적인 영향을 미침."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 2025년 1분기와 관련되어 있으며, 해당 분기의 매출액 증가율과 직접적으로 연결됨."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "세포치료제 및 인체조직모델 관련 사업은 바이오솔루션의 주요 사업영역과 완전히 일치함."
+              },
+              "financial_impact": {
+                "score": 8,
+                "explanation": "뉴스의 긍정적인 내용은 단기적으로 매출 증가에 기여할 것으로 예상되며, 재무성과에 실질적인 영향을 미칠 가능성이 높음."
+              },
+              "overall_semantic_score": 8.5,
+              "reasoning": "뉴스 내용이 매출 증가와 관련된 긍정적인 요소를 포함하고 있으며, 회사의 주요 사업과도 일치하여 재무지표에 긍정적인 영향을 미칠 것으로 판단됨."
+            },
+            "news_info": {
+              "title": "Fnguide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+              "url": "https://asp01.fnguide.com/SVO2/ASP/SVD_Main.asp?MenuYn=Y&NewMenuID=Y&ReportGB=B&cID=50&gicode=A086820&pGB=1&stkGb=770",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 5.94,
+            "semantic_analysis_score": 5.5,
+            "hybrid_relevance_score": 5.63,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스 내용이 PER, PBR 등 재무 비율에 대한 정보 제공에 중점을 두고 있어 매출액 증가율에 직접적인 영향을 미치는 요소는 부족함."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스가 2024년 결산 기준으로 작성되었으나, 매출액 증가율은 최신 분기 기준으로 측정되어 시점이 다소 차이가 있음."
+              },
+              "business_alignment": {
+                "score": 7,
+                "explanation": "뉴스 내용이 바이오솔루션의 재무 지표와 관련된 정보 제공에 중점을 두고 있어 사업 영역과 관련성이 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 매출 증가율에 대한 직접적인 언급이 없고, 재무 비율에 대한 정보만 제공하므로 재무성과에 미치는 영향은 제한적."
+              },
+              "overall_semantic_score": 5.5,
+              "reasoning": "뉴스 내용이 재무 비율에 대한 정보 제공에 중점을 두고 있으나, 매출액 증가율과의 직접적인 연관성은 낮고, 시점 차이로 인해 영향력이 제한적임."
+            },
+            "news_info": {
+              "title": "Company Guide 바이오솔루션(A086820) | Snapshot | 기업정보 | Company Guide",
+              "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A086820",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.62,
+            "semantic_analysis_score": 5.75,
+            "hybrid_relevance_score": 5.41,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스는 회사의 직원 수와 근무환경에 대한 정보만 제공하며, 매출 증가에 대한 직접적인 언급이 없음."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스는 2025년 기업정보를 다루고 있으나, 재무지표는 최신 분기 기준으로 측정됨."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 바이오솔루션의 생물학적 제제 제조업과 관련이 있으나, 매출 증가와의 직접적인 연결은 부족함."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스 내용이 매출 증가율에 대한 직접적인 정보를 제공하지 않아 재무성과에 미치는 영향은 제한적."
+              },
+              "overall_semantic_score": 5.75,
+              "reasoning": "뉴스 내용이 회사의 기본 정보에 국한되어 있어 매출 증가율과의 직접적인 연관성이 낮고, 재무지표에 대한 명확한 영향을 미치지 않음."
+            },
+            "news_info": {
+              "title": "JobKorea ㈜바이오솔루션 2025년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+              "url": "https://www.jobkorea.co.kr/recruit/co_read/c/biosolution",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 6.36,
+          "max_hybrid_score": 8.04,
+          "relevant_news_count": 1
+        }
+      },
+      "search_info": {
+        "final_query": "\"바이오솔루션 매출액증가율 이상치 21.8 관련 뉴스\"",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T07:00:06.812910"
+    }
+  ]
+}

@@ -1,0 +1,688 @@
+{
+  "success": true,
+  "analysis_method": "hybrid_relevance_check",
+  "methodology": {
+    "cosine_similarity_weight": 0.3,
+    "llm_semantic_weight": 0.7,
+    "relevance_threshold": 6.0,
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "company_info": {
+    "기업명": "삼성전자(주)",
+    "영문기업명": "SAMSUNG ELECTRONICS CO,.LTD",
+    "종목코드": "005930",
+    "대표자명": "전영현",
+    "법인구분": "Y",
+    "법인등록번호": "1301110006246",
+    "사업자등록번호": "1248100998",
+    "주소": "경기도 수원시 영통구  삼성로 129 (매탄동)",
+    "업종코드": "264",
+    "설립일": "19690113",
+    "결산월": "12",
+    "업종": "통신 및 방송 장비 제조업",
+    "제품군": "통신 및 방송 장비 제조(무선) 제품, 반도체 제조(메모리) 제품,  전자부품 제조(디스플레이) 제품, 영상 및 음향기기 제조(영상기기) 제품 등",
+    "Current_credit_grade": "AA+"
+  },
+  "analysis_summary": {
+    "total_anomalies": 4,
+    "successful_analyses": 4,
+    "analysis_timestamp": "2025-08-14T01:03:08.714788"
+  },
+  "anomaly_news_analyses": [
+    {
+      "anomaly_info": {
+        "metric_name": "ROE",
+        "description": "2.03로 동종업계 평균인 4.36를 53.4%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "삼성전자의 ROE 감소는 총자산회전율과 재무 레버리지의 감소로 인한 경영 효율성 저하에 기인함.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: ROE가 최근 20년 사이 절반 아래로 떨어졌으며, 총자산회전율과 재무 레버리지가 감소했다고 언급됨.",
+          "뉴스 2: 삼성전자의 PER과 PBR 등 재무 지표가 동종업계 평균에 비해 낮은 수준임을 보여줌.",
+          "뉴스 3: 재무제표에서 나타나는 수익성과 자산 활용도 저하가 ROE에 부정적인 영향을 미쳤음을 시사함."
+        ],
+        "detailed_explanation": "삼성전자의 ROE가 동종업계 평균보다 현저히 낮은 이유는 총자산회전율과 재무 레버리지가 감소했기 때문입니다. 이는 경영 효율성이 저하되었음을 나타내며, 과거에 비해 부진한 투자 수익성과 부채 활용에 소극적인 태도가 자본 활용도를 떨어뜨리고 있습니다. 이러한 경향은 향후 수익성에 부정적인 영향을 미칠 수 있습니다.",
+        "news_sources": [
+          "https://news.einfomax.co.kr/news/articleView.html?idxno=4353433",
+          "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=B&NewMenuID=Y&stkGb=701"
+        ],
+        "impact_assessment": "ROE의 감소는 투자자 신뢰도에 부정적인 영향을 미칠 수 있으며, 이는 주가에 악영향을 줄 수 있음.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 평균 관련성 점수 6.14/10으로 적절한 관련성을 보임."
+      },
+      "news_evidence": [
+        {
+          "title": "\"무겁고 느려졌다\"…삼성전자 ROE 20년 사이 반토막 < IB/기업 <...",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4353433",
+          "content": "Apr 29, 2025 · 삼성전자 [005930]의 자기자본이익률( ROE )이 최근 20년 사이 절반 아래로 떨어졌다. ROE 는 경영 효율성을 평가하는 대표적 지표다.순이익률은 선방했지만, 총자산회전율과 재무 레버리지가 감소하면서 ROE 를 끌어내렸다. 과거에 비해 부진한 투자 수익성과 부채 활용에 소극적인 태도가 자본 활용도를",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.42,
+          "cosine_score": 5.5,
+          "semantic_score": 8.25
+        },
+        {
+          "title": "Company Guide 삼성전자(A005930) | Snapshot | 기업정보 | Company Guide",
+          "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=B&NewMenuID=Y&stkGb=701",
+          "content": "* 최근결산은 2024/12 (연간) 기준임.PER)20.45 12M PER 전일자 보통주 수정주가 / 12개월 Forward EPS12M PER)-업종 PER 시장대표업종||SUM(구성종목 시가총액)/SUM(구성종목 당기순이익) * 당기순이익은 최근결산 2024/12 (연간) 기준임.업종 PER)16.00 PBR(Price Book-value Ratio)전일자 보통주 수정주가 / 최근 결산기 BPS(주당순자산)  * 최근결산은 2024/12 (연간) 기준임.PBR)2.02 배당수익률{최근 결산기 보통주 DPS(현금, 무상조정) / 전일자 보통주 수정주가} *100 50.57 Image 2: 외국인 지분율,시가총액 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")   유동주식수 = 지수산정주식수-(최대주주등(본인+특별관계자)+우리사주+자사주+보호예수+정부기관(5%이상)+해외DR).유동주식수/비율)(보통주) | 4,477,288,751 / 75.63 | 거래량/거래대금(NXT)(억원) | 5,923,828 / 4,229 | Image 4: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 6: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 10: PBR 밴드 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.65,
+          "cosine_score": 5.42,
+          "semantic_score": 5.75
+        },
+        {
+          "title": "삼성전자 (A005930) | 재무제표 | 기업정보 | Company Guide",
+          "url": "https://comp.fnguide.com/SVO2/asp/SVD_Finance.asp",
+          "content": "ETF Snapshot)성과 및 위험분석)ETN Snapshot) 최근결산은 2024/12 (연간) 기준임.PER11.29 12M PER 전일자 보통주 수정주가 / 12개월 Forward EPS12M PER10.84 업종 PER 시장대표업종||SUM(구성종목 시가총액)/SUM(구성종목 당기순이익) 당기순이익은 최근결산 2024/12 (연간) 기준임.업종 PER12.21 PBR(Price Book-value Ratio)전일자 보통주 수정주가 / 최근 결산기 BPS(주당순자산)  최근결산은 2024/12 (연간) 기준임.PBR0.96 배당수익률{최근 결산기 보통주 DPS(현금, 무상조정) / 전일자 보통주 수정주가} *100 재무상태표| IFRS(연결) | 2022/12 | 2023/12 | 2024/12 | 2025/03 | 재무상태표| IFRS(연결) | 2024/06 | 2024/09 | 2024/12 | 2025/03 | 현금흐름표| IFRS(연결) | 2022/12 | 2023/12 | 2024/12 | 2025/03 | 현금흐름표| IFRS(연결) | 2024/06 | 2024/09 | 2024/12 | 2025/03 | FnGuide에서 제공하는 정보는 신뢰할 만한 자료 및 정보로부터 얻어진 것이나 그 정확성이나 완전성을 보장 할 수 없으며, 시간이 경과함에 따라 변경될 수 있습니다.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.34,
+          "cosine_score": 4.96,
+          "semantic_score": 5.5
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 5.5,
+            "semantic_analysis_score": 8.25,
+            "hybrid_relevance_score": 7.42,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 ROE 감소는 경영 효율성 저하를 나타내며, 이는 직접적으로 재무지표에 영향을 미친다."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 시점이 2025년 4월로, 최신 분기 ROE 수치와 시간적으로 밀접하게 연결되어 있다."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "삼성전자의 주요 사업영역인 전자 및 반도체 산업과 관련된 경영 효율성 지표인 ROE에 대한 논의가 이루어지고 있다."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "ROE 감소는 투자자 신뢰도에 영향을 미칠 수 있으며, 이는 장기적으로 재무성과에 부정적인 영향을 미칠 가능성이 있다."
+              },
+              "overall_semantic_score": 8.25,
+              "reasoning": "뉴스 내용이 ROE 감소와 관련된 경영 효율성 저하를 명확히 언급하고 있으며, 시간적 및 사업적 일치성이 높아 재무지표에 대한 의미적 연관성이 강하다."
+            },
+            "news_info": {
+              "title": "\"무겁고 느려졌다\"…삼성전자 ROE 20년 사이 반토막 < IB/기업 <...",
+              "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4353433",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.42,
+            "semantic_analysis_score": 5.75,
+            "hybrid_relevance_score": 5.65,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스 내용은 삼성전자의 재무지표에 대한 직접적인 언급이 없으나, 업종 PER과 같은 지표가 언급되어 있어 간접적인 영향을 미칠 가능성이 있음."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스는 2024년 결산 기준으로 작성되었으며, ROE 지표가 최신 분기 기준으로 측정되었으므로 시간적으로 연결됨."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용은 삼성전자의 재무지표와 관련된 기업 정보로, 회사의 주요 사업 영역인 전자 및 반도체 산업과 관련이 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 직접적으로 재무성과에 미치는 영향은 제한적이나, 업종 평균과 비교하여 ROE가 낮은 점은 투자자 신뢰도에 영향을 줄 수 있음."
+              },
+              "overall_semantic_score": 5.75,
+              "reasoning": "뉴스 내용이 삼성전자의 재무지표와 관련이 있으나, 직접적인 인과관계는 약하며, 재무성과에 미치는 영향도 제한적임."
+            },
+            "news_info": {
+              "title": "Company Guide 삼성전자(A005930) | Snapshot | 기업정보 | Company Guide",
+              "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930&cID=&MenuYn=Y&ReportGB=B&NewMenuID=Y&stkGb=701",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.96,
+            "semantic_analysis_score": 5.5,
+            "hybrid_relevance_score": 5.34,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스 내용이 재무지표에 직접적인 영향을 미치는 요소를 포함하고 있지 않음."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스는 2024년 결산을 기준으로 하고 있으며, ROE는 최신 분기 기준으로 측정됨. 다소 시점이 일치하나, 구체적인 분기 정보가 부족함."
+              },
+              "business_alignment": {
+                "score": 7,
+                "explanation": "뉴스 내용이 삼성전자의 재무제표와 관련된 정보로, 주요 사업영역과 관련성이 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적이며, ROE의 이상치와 직접적인 연관성이 낮음."
+              },
+              "overall_semantic_score": 5.5,
+              "reasoning": "뉴스 내용이 삼성전자의 재무지표와 관련이 있으나, 직접적인 인과관계나 재무적 영향은 미미함."
+            },
+            "news_info": {
+              "title": "삼성전자 (A005930) | 재무제표 | 기업정보 | Company Guide",
+              "url": "https://comp.fnguide.com/SVO2/asp/SVD_Finance.asp",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 6.14,
+          "max_hybrid_score": 7.42,
+          "relevant_news_count": 1
+        }
+      },
+      "search_info": {
+        "final_query": "삼성전자 ROE 2.03, 동종업계 평균 4.36 하회, 재무지표 이상치 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T01:01:31.018748"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율(YoY)",
+        "description": "10.05로 동종업계 평균인 2.21를 355.1%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "플래그십 스마트폰 '갤럭시 S25'의 판매 호조로 인한 매출 증가",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 삼성 전자는 2025년 1분기 연결 기준 매출 79조1405억원, 영업이익 6조6853억원을 기록했다고 발표했다.",
+          "뉴스 2: 삼성전자 1분기 실적으로 연결 기준 매출액 79조1400억원, 영업이익 6조7000억원을 기록했다.",
+          "뉴스 1: 플래그십 스마트폰 ‘갤럭시 S25’의 판매 호조와 고부가"
+        ],
+        "detailed_explanation": "삼성전자는 2025년 1분기 동안 사상 최대 매출을 기록하며, 전년 동기 대비 10% 증가한 매출액을 달성했다. 특히, 갤럭시 S25의 판매 호조가 매출 증가에 크게 기여한 것으로 보인다. 이러한 성장은 동종업계 평균을 크게 상회하는 수치로, 시장에서의 경쟁력을 강화하고 있음을 나타낸다.",
+        "news_sources": [
+          "https://www.psnews.co.kr/news/articleView.html?idxno=2092784",
+          "https://www.thevaluenews.co.kr/news/190130"
+        ],
+        "impact_assessment": "삼성전자의 매출 증가가 지속된다면, 향후 영업이익 및 시장 점유율에도 긍정적인 영향을 미칠 것으로 예상된다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 7.54/10"
+      },
+      "news_evidence": [
+        {
+          "title": "삼성전자, 1분기 매출 '사상 최대' 79조1405억…연구개발비 9조 투입 &...",
+          "url": "https://www.psnews.co.kr/news/articleView.html?idxno=2092784",
+          "content": "Apr 30, 2025 · 삼성 전자는 2025년 1분기 연결 기준 매출 79조1405억원, 영업이익 6조6853억원을 기록했다고 30일 발표했다. 매출액은 전년 동기 대비 10 .1%, 영업이익은 1.2% 증가했다. 1분기 매출은 사상 최대 분기 매출을 기록했다. 전분기 대비 4% 증가한 수치다.플래그십 스마트폰 ‘갤럭시 S25’의 판매 호조와 고부가",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 8.02,
+          "cosine_score": 6.33,
+          "semantic_score": 8.75
+        },
+        {
+          "title": "삼성전자, 1Q 매출 79.1조...전년동기比 10%↑",
+          "url": "https://www.thevaluenews.co.kr/news/190130",
+          "content": "Apr 30, 2025 · 삼성전자 (대표이사 전영현)가 올해 1분기 실적으로 연결 기준 매출액 79조1400억원, 영업이익 6조7000억원을 기록했다고 공시했다(K-IFRS 연결). 이는 전년 동기 대비 각각 10 %, 1.4% 증가한 수치다. 삼성전자 최근 분기별 매출액 및 영업이익률 추이. [이미지= 더밸류 뉴스 ] 삼성 전자는 이번 공시를 통해 DX부문",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.98,
+          "cosine_score": 6.77,
+          "semantic_score": 8.5
+        },
+        {
+          "title": "[표] 삼성전자 2012∼2024년 분기별 매출·영업이익 | 연합뉴스",
+          "url": "https://www.yna.co.kr/view/AKR20241031024500003",
+          "content": "# [표] 삼성전자 2012∼2024년 분기별 매출·영업이익 송고2024-10-31 08:46 송고 2024년10월31일 08시46분 강태우 (연결기준, 단위 : 조원) ※자료 = 금융감독원 전자공시시스템 (서울=연합뉴스) <저작권자(c) 연합뉴스, 2024/10/31 08:46 송고 2024년10월31일 08시46분 송고 민주 강선우, 선거 유세 중 폭행당해… \"민주주의에 대한 폭력\" 트랜스젠더 고교생, 美 캘리포니아 육상 우승…\"논란 중심\" 美 배우 스테인펠드-NFL 쿼터백 조시 앨런 화촉 19년 동안 회사 자금 40억 빼돌린 임원 징역 4년 #### 영상 ![[영상] 22년 전 대구와 달랐다…서울지하철 방화, 참사 막았던 이유]( ![[영상] 초계기 순직장병들 눈물의 영결식…'추도사' 참모총장 끝내 오열]( ![[영상] '인감도장 투표' 가짜뉴스 기승…선관위 \"기표용구로 투표해야\"]( #### 뉴스 李는 여의도, 金은 광화문…오늘 대선 유세 '피날레' ### 오래 머문 뉴스 ![[와플] 치솟는 금값에 '돌반지' 대신 00 선물한다고?]( ![[캐첩] 손등 대신 여기에?!…MZ들의 투표 인증 트렌드]( ![[캐첩] '지피티갸륵체'?…MZ들이 따라하는 요즘 GPT 말투](",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.6,
+          "cosine_score": 8.0,
+          "semantic_score": 6.0
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 6.33,
+            "semantic_analysis_score": 8.75,
+            "hybrid_relevance_score": 8.02,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 '갤럭시 S25'의 판매 호조가 매출 증가에 직접적인 영향을 미쳤음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 발표 시점이 2025년 1분기로, 해당 분기의 매출액증가율과 직접적으로 연결됨."
+              },
+              "business_alignment": {
+                "score": 10,
+                "explanation": "삼성전자의 주요 사업영역인 스마트폰 판매와 관련된 내용으로 완전히 일치."
+              },
+              "financial_impact": {
+                "score": 8,
+                "explanation": "뉴스 내용이 매출 증가를 직접적으로 반영하고 있어 단기적으로도 재무성과에 긍정적인 영향을 미칠 것으로 예상됨."
+              },
+              "overall_semantic_score": 8.75,
+              "reasoning": "뉴스 내용이 삼성전자의 매출 증가와 직접적으로 연결되어 있으며, 시간적, 사업적 일치성도 높아 재무지표 이상치와 강한 연관성을 보임."
+            },
+            "news_info": {
+              "title": "삼성전자, 1분기 매출 '사상 최대' 79조1405억…연구개발비 9조 투입 &...",
+              "url": "https://www.psnews.co.kr/news/articleView.html?idxno=2092784",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 6.77,
+            "semantic_analysis_score": 8.5,
+            "hybrid_relevance_score": 7.98,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 1Q 매출 증가가 매출액증가율에 직접적인 영향을 미침."
+              },
+              "temporal_relevance": {
+                "score": 10,
+                "explanation": "뉴스 시점이 1분기 실적 발표와 일치하여 적합함."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성전자의 주요 사업 영역인 전자 및 반도체와 관련이 있음."
+              },
+              "financial_impact": {
+                "score": 8,
+                "explanation": "매출 증가가 재무성과에 긍정적인 영향을 미칠 것으로 예상됨."
+              },
+              "overall_semantic_score": 8.5,
+              "reasoning": "뉴스 내용이 매출 증가와 관련된 긍정적인 정보를 제공하며, 이는 재무지표의 이상치와 밀접하게 연결됨."
+            },
+            "news_info": {
+              "title": "삼성전자, 1Q 매출 79.1조...전년동기比 10%↑",
+              "url": "https://www.thevaluenews.co.kr/news/190130",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 8.0,
+            "semantic_analysis_score": 6.0,
+            "hybrid_relevance_score": 6.6,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스 내용이 삼성전자의 매출 및 영업이익에 대한 정보 제공에 그치며, 직접적인 인과관계는 명확하지 않음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스가 2024년 10월 31일에 송고되었으며, 재무지표는 최신 분기를 반영하고 있어 시간적으로 적합함."
+              },
+              "business_alignment": {
+                "score": 7,
+                "explanation": "뉴스 내용이 삼성전자의 매출 및 영업이익에 대한 데이터이므로, 회사의 주요 사업영역과 관련성이 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 매출액 증가율에 대한 직접적인 원인을 설명하지 않으므로, 재무성과에 미치는 영향은 제한적일 것으로 예상됨."
+              },
+              "overall_semantic_score": 6,
+              "reasoning": "뉴스는 삼성전자의 매출 및 영업이익에 대한 정보를 제공하지만, 직접적인 인과관계나 재무적 영향을 명확히 설명하지 않음. 그러나 시간적 적합성과 사업영역의 일치성은 긍정적 요소로 작용."
+            },
+            "news_info": {
+              "title": "[표] 삼성전자 2012∼2024년 분기별 매출·영업이익 | 연합뉴스",
+              "url": "https://www.yna.co.kr/view/AKR20241031024500003",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 7.54,
+          "max_hybrid_score": 8.02,
+          "relevant_news_count": 3
+        }
+      },
+      "search_info": {
+        "final_query": "삼성전자 매출액증가율 10.05, 동종업계 평균 2.21 이상치 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T01:02:06.643615"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "PER",
+        "description": "27.12로 동종업계 평균인 86.87를 68.8%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "삼성전자의 PER이 동종업계 평균보다 낮은 이유는 시장의 기대치와 실적 간의 괴리 때문으로 보임.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 최신 폰 구매의 최적 솔루션, 갤럭시 AI 구독클럽",
+          "뉴스 2: 최신 전자 및 스마트 가전 기술 소개",
+          "뉴스 3: 삼성의 다양한 사업 영역 소개"
+        ],
+        "detailed_explanation": "삼성전자는 모바일, TV, 가전 등 다양한 분야에서 활동하고 있지만, 최근 시장에서의 기대치가 낮아져 PER이 동종업계 평균보다 크게 하회하고 있는 것으로 분석됨. 이는 소비자 수요의 변화나 경쟁사의 강력한 신제품 출시 등으로 인해 발생할 수 있으며, 이러한 요인들이 삼성전자의 실적에 부정적인 영향을 미쳤을 가능성이 있음.",
+        "news_sources": [
+          "https://www.samsung.com/sec/?msockid=27a2d55d525468601f94c31a532d69cf",
+          "https://www.samsung.com/us/?msockid=27a2d55d525468601f94c31a532d69cf"
+        ],
+        "impact_assessment": "PER의 이상치는 투자자 신뢰도에 부정적인 영향을 미칠 수 있으며, 이는 주가에 직접적인 영향을 줄 수 있음.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 평균 관련성 점수 5.29/10으로 보통 수준"
+      },
+      "news_evidence": [
+        {
+          "title": "Samsung 대한민국 | 모바일 | TV | 가전 | IT",
+          "url": "https://www.samsung.com/sec/?msockid=27a2d55d525468601f94c31a532d69cf",
+          "content": "모바일 | TV | 가전 | IT최신 폰 구매의 최적 솔루션, 갤럭시 AI 구독클럽",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.66,
+          "cosine_score": 4.85,
+          "semantic_score": 6.0
+        },
+        {
+          "title": "Samsung US | Mobile - TV | Home Electronics",
+          "url": "https://www.samsung.com/us/?msockid=27a2d55d525468601f94c31a532d69cf",
+          "content": "Discover the latest in electronic & smart appliance technology with Samsung. Find the next big thing from smartphones & tablets to laptops & tvs & more.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.14,
+          "cosine_score": 3.13,
+          "semantic_score": 6.0
+        },
+        {
+          "title": "Our Business | About Us | Samsung US",
+          "url": "https://www.samsung.com/us/about-us/our-business/?msockid=27a2d55d525468601f94c31a532d69cf",
+          "content": "Discover the areas in which Samsung operates, including consumer electronics, IT & mobile communications, device solutions, and more.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.08,
+          "cosine_score": 5.25,
+          "semantic_score": 5.0
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.85,
+            "semantic_analysis_score": 6.0,
+            "hybrid_relevance_score": 5.66,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스에서 언급된 갤럭시 AI 구독클럽은 새로운 서비스로, 매출 증가에 기여할 가능성이 있지만 직접적인 영향은 불확실함."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스 시점이 최신 분기와 관련이 있을 수 있으나, 구체적인 출시 일정이나 매출 반영 시점이 명시되지 않음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성전자의 주요 사업영역인 모바일 및 IT와 밀접하게 관련되어 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "단기적으로는 매출에 미치는 영향이 제한적일 수 있으며, 구독 서비스의 효과가 가시화되기까지 시간이 필요함."
+              },
+              "overall_semantic_score": 6.0,
+              "reasoning": "뉴스 내용은 삼성전자의 사업과 관련이 있지만, 재무지표에 미치는 영향은 제한적이며, 직접적인 인과관계는 불확실함."
+            },
+            "news_info": {
+              "title": "Samsung 대한민국 | 모바일 | TV | 가전 | IT",
+              "url": "https://www.samsung.com/sec/?msockid=27a2d55d525468601f94c31a532d69cf",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 3.13,
+            "semantic_analysis_score": 6.0,
+            "hybrid_relevance_score": 5.14,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스는 삼성전자의 최신 전자제품에 대한 홍보로, 매출 증가에 간접적인 영향을 미칠 수 있으나, PER 지표에 직접적인 영향을 미친다고 보기는 어려움."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스가 최신 제품에 대한 정보이므로, 최근 분기와 관련이 있을 가능성이 있지만, 구체적인 시점이 명시되지 않아 확실하지 않음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성전자의 주요 사업영역인 전자제품 및 스마트 가전과 완전히 일치함."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "단기적으로는 매출에 긍정적인 영향을 미칠 수 있으나, PER 지표의 이상치 해소에는 시간이 필요할 것으로 보임."
+              },
+              "overall_semantic_score": 6,
+              "reasoning": "뉴스는 삼성전자의 제품 홍보와 관련이 있지만, PER 지표의 이상치와의 직접적인 연관성은 낮음. 그러나 사업 영역의 일치성으로 인해 긍정적인 영향을 미칠 가능성은 존재."
+            },
+            "news_info": {
+              "title": "Samsung US | Mobile - TV | Home Electronics",
+              "url": "https://www.samsung.com/us/?msockid=27a2d55d525468601f94c31a532d69cf",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.25,
+            "semantic_analysis_score": 5.0,
+            "hybrid_relevance_score": 5.08,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 4,
+                "explanation": "뉴스 내용이 삼성전자의 사업 영역을 소개하지만, PER 지표에 직접적인 영향을 미치는 요소는 부족함."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점이 명시되지 않아 재무지표 측정 시점과의 연결성이 불확실함."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 삼성전자의 주요 사업 영역인 소비자 전자제품 및 IT와 관련이 있음."
+              },
+              "financial_impact": {
+                "score": 3,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적이며, PER 지표의 이상치와의 직접적인 연관성은 낮음."
+              },
+              "overall_semantic_score": 5,
+              "reasoning": "뉴스는 삼성전자의 사업 영역을 다루고 있으나, 재무지표에 대한 직접적인 영향은 미미하며, 시간적 적합성도 불확실함."
+            },
+            "news_info": {
+              "title": "Our Business | About Us | Samsung US",
+              "url": "https://www.samsung.com/us/about-us/our-business/?msockid=27a2d55d525468601f94c31a532d69cf",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 5.29,
+          "max_hybrid_score": 5.66,
+          "relevant_news_count": 0
+        }
+      },
+      "search_info": {
+        "final_query": "삼성전자 PER 이상치 27.12, 동종업계 평균 86.87 하회 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T01:02:40.193394"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율",
+        "description": "10.05로 과거 4분기 평균인 16.18를 벗어나는 이상치 탐지 (표준편차 2.0배 하회)",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "time_series",
+        "source": "timeseries_analysis"
+      },
+      "analysis": {
+        "primary_cause": "삼성전자의 매출 감소와 영업이익 급감",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 삼성전자는 2분기 영업이익이 4조6천억원으로 55.9% 감소했다.",
+          "뉴스 1: 매출은 74조원으로 작년 동기 대비 0.09% 감소했다.",
+          "뉴스 2: 역대 최대 매출에도 불구하고 수익성이 악화되었다."
+        ],
+        "detailed_explanation": "삼성전자의 최근 분기 매출액 증가율이 과거 평균을 크게 하회한 것은 영업이익의 급감과 매출 감소에 기인합니다. 특히, 2분기 영업이익이 지난해 같은 기간 대비 55.9% 감소하면서 시장의 기대치를 크게 밑돌았고, 매출 또한 소폭 감소했습니다. 이러한 수익성 악화는 소비자 수요 감소나 경쟁 심화 등 외부 요인에 의해 발생했을 가능성이 있습니다.",
+        "news_sources": [
+          "https://www.youtube.com/watch?v=381R-7LH6EQ",
+          "https://www.youtube.com/shorts/3mImfJ8q3iQ"
+        ],
+        "impact_assessment": "매출액 증가율의 이상치는 삼성전자의 전반적인 재무 건전성에 부정적인 영향을 미칠 수 있으며, 투자자 신뢰도에도 악영향을 미칠 수 있습니다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 7.34/10"
+      },
+      "news_evidence": [
+        {
+          "title": "[속보] 삼성전자 2분기 영업이익 4조6천억원…55.9% 감소 / 연합뉴스 ...",
+          "url": "https://www.youtube.com/watch?v=381R-7LH6EQ",
+          "content": "[속보] 삼성전자 2분기 영업이익 4조6천억원…55.9% 감소 / 연합뉴스TV (YonhapnewsTV)\n연합뉴스TV\n2029999 subscribers\n14 likes\n3285 views\n7 Jul 2025\n삼성전자는 연결 기준 올해 2분기 영업이익이 4조6천억원으로 지난해 같은 기간보다 55.94% 감소한 것으로 잠정 집계됐다고 오늘 공시했습니다.\n\n이번 영업이익은 연합인포맥스가 집계한 시장 전망치 6조69억원을 23.4% 하회한 것입니다.\n\n매출은 74조원으로 작년 동기 대비 0.09% 감소했습니다.\n\n▣ 연합뉴스TV 다큐멘터리 전문 채널 '다큐디깅' 구독하기\nhttps://www.youtube.com/@Docu-Digging\n\n▣ 연합뉴스TV 유튜브 채널 구독\nhttps://www.youtube.com/@yonhapnewstv23\n\n▣ 대한민국 뉴스의 시작 연합뉴스TV / Yonhap News TV\nhttp://www.yonhapnewstv.co.kr/\n19 comments\n",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.85,
+          "cosine_score": 5.75,
+          "semantic_score": 8.75
+        },
+        {
+          "title": "삼성전자, 역대 최대 매출 이면엔 악화한 수익성 - YouTube",
+          "url": "https://www.youtube.com/shorts/3mImfJ8q3iQ",
+          "content": "Missing: 증가율 10.05, 과거 평균 16.18 이상치",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.83,
+          "cosine_score": 4.69,
+          "semantic_score": 7.75
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.75,
+            "semantic_analysis_score": 8.75,
+            "hybrid_relevance_score": 7.85,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 영업이익 감소와 매출 감소는 매출액증가율에 직접적인 부정적 영향을 미칠 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 시점이 2분기와 관련이 있으며, 재무지표도 최신 분기 기준으로 측정됨."
+              },
+              "business_alignment": {
+                "score": 10,
+                "explanation": "삼성전자의 주요 사업영역인 전자제품 및 반도체와 관련된 영업이익 및 매출 정보."
+              },
+              "financial_impact": {
+                "score": 8,
+                "explanation": "영업이익과 매출 감소는 재무성과에 즉각적인 부정적 영향을 미치며, 매출액증가율의 이상치로 이어짐."
+              },
+              "overall_semantic_score": 8.75,
+              "reasoning": "뉴스 내용이 삼성전자의 재무지표에 직접적이고 명확한 영향을 미치며, 시간적 및 사업적 일치성이 높아 종합적으로 긍정적인 상관관계를 나타냄."
+            },
+            "news_info": {
+              "title": "[속보] 삼성전자 2분기 영업이익 4조6천억원…55.9% 감소 / 연합뉴스 ...",
+              "url": "https://www.youtube.com/watch?v=381R-7LH6EQ",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.69,
+            "semantic_analysis_score": 7.75,
+            "hybrid_relevance_score": 6.83,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 수익성 악화가 매출 증가율에 간접적인 영향을 미칠 수 있음"
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 시점이 최근 분기와 일치하여 관련성이 높음"
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성전자의 주요 사업 영역인 반도체 및 전자제품과 관련 있음"
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "수익성 악화가 매출 증가율에 영향을 미칠 가능성이 있으며, 이는 재무성과에 직접적인 영향을 줄 수 있음"
+              },
+              "overall_semantic_score": 7.75,
+              "reasoning": "뉴스 내용이 매출액 증가율의 이상치와 관련이 있으며, 수익성 악화가 매출 증가율에 미치는 영향이 크기 때문에 종합적으로 긍정적인 연관성을 보임"
+            },
+            "news_info": {
+              "title": "삼성전자, 역대 최대 매출 이면엔 악화한 수익성 - YouTube",
+              "url": "https://www.youtube.com/shorts/3mImfJ8q3iQ",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 2,
+          "average_hybrid_score": 7.34,
+          "max_hybrid_score": 7.85,
+          "relevant_news_count": 2
+        }
+      },
+      "search_info": {
+        "final_query": "삼성전자 매출액증가율 10.05, 과거 평균 16.18 이상치 뉴스",
+        "retry_count": 0,
+        "total_news_found": 2,
+        "relevant_news_count": 2
+      },
+      "timestamp": "2025-08-14T01:03:08.712782"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "ROE": {
+        "type": "peer_comparison",
+        "metric_name": "ROE",
+        "description": "4.43로 동종업계 평균인 2.36를 87.4%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "PER": {
+        "type": "peer_comparison",
+        "metric_name": "PER",
+        "description": "10.86로 동종업계 평균인 6.13를 77.1%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "부채비율": {
+        "type": "time_series",
+        "metric_name": "부채비율",
+        "description": "최신 분기(848.14)가 1년 전 동분기 값(670.34) 대비 26.5% 증가",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "timeseries_analysis"
+    }
+}

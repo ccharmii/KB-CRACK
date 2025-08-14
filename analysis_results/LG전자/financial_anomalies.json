@@ -1,0 +1,34 @@
+{
+    "ROE": {
+        "type": "peer_comparison",
+        "metric_name": "ROE",
+        "description": "3.4로 동종업계 평균인 1.68를 102.6%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "매출액증가율(YoY)": {
+        "type": "peer_comparison",
+        "metric_name": "매출액증가율(YoY)",
+        "description": "7.79로 동종업계 평균인 -3.78를 306.3%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "PER": {
+        "type": "peer_comparison",
+        "metric_name": "PER",
+        "description": "19.52로 동종업계 평균인 81.04를 75.9%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "매출액증가율": {
+        "type": "time_series",
+        "metric_name": "매출액증가율",
+        "description": "최신 분기(7.79)가 1년 전 동분기 값(3.33) 대비 134.0% 증가",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "timeseries_analysis"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "company_name": "LG전자",
+  "current_credit_grade": "AAA",
+  "corp_code": "00401731",
+  "start_time": "2025-08-14T14:42:16.546580",
+  "output_directory": "analysis_results\\LG전자",
+  "steps_completed": [
+    "financial_analysis",
+    "non_financial_analysis",
+    "financial_reasoning",
+    "news_analysis",
+    "final_report"
+  ],
+  "steps_failed": [],
+  "latest_quarter": "2025Q1",
+  "end_time": "2025-08-14T15:01:51.693217",
+  "total_duration": "0:19:35.146637"
+}

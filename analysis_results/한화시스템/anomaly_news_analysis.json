@@ -1,0 +1,343 @@
+{
+  "success": true,
+  "analysis_method": "hybrid_relevance_check",
+  "methodology": {
+    "cosine_similarity_weight": 0.3,
+    "llm_semantic_weight": 0.7,
+    "relevance_threshold": 6.0,
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "company_info": {
+    "기업명": "한화시스템(주)",
+    "영문기업명": "HANWHA SYSTEMS Co., Ltd.",
+    "종목코드": "272210",
+    "대표자명": "손재일",
+    "법인구분": "Y",
+    "법인등록번호": "1760110020640",
+    "사업자등록번호": "5138117175",
+    "주소": "경상북도 구미시 산호대로 264-60 -",
+    "업종코드": "26299",
+    "설립일": "20000111",
+    "결산월": "12",
+    "업종": "전자부품 제조업",
+    "제품군": "정밀기기(육해공군관련전자제어시스템,열영상감시장비,탐지추적장치,전투지휘체계시스템) 제조",
+    "Current_credit_grade": "A+"
+  },
+  "analysis_summary": {
+    "total_anomalies": 2,
+    "successful_analyses": 2,
+    "analysis_timestamp": "2025-08-14T13:16:56.111587"
+  },
+  "anomaly_news_analyses": [
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율(YoY)",
+        "description": "26.82로 동종업계 평균인 2.32를 1056.4%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "한화시스템의 실적 개선 및 외형 성장",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 한화시스템이 2023년 실적을 발표하며 매출 2조 4,531억 원을 달성했다고 보도됨.",
+          "뉴스 1: 2022년 대비 매출이 12.1% 증가하여 영업이익이 929억 원에 달함.",
+          "뉴스 2: 업종 PER이 14.37로, 한화시스템의 PER이 22.04로 상대적으로 높은 수치를 기록함."
+        ],
+        "detailed_explanation": "한화시스템은 2023년 실적 발표에서 매출과 영업이익 모두 개선된 결과를 보여주었으며, 이는 외형 성장과 수익성 개선에 기인합니다. 특히, 매출액 증가율이 동종업계 평균을 크게 상회하는 것은 회사의 경쟁력과 시장에서의 위치를 강화하고 있음을 나타냅니다. 이러한 실적 개선은 향후 지속적인 성장 가능성을 시사합니다.",
+        "news_sources": [
+          "https://www.aseanexpress.co.kr/news/article.html?no=9653",
+          "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A272210"
+        ],
+        "impact_assessment": "한화시스템의 매출액 증가율이 동종업계 평균을 크게 초과함에 따라, 투자자들의 신뢰도가 높아지고 주가 상승에 긍정적인 영향을 미칠 것으로 예상됨.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통해 뉴스의 관련성이 높게 평가됨."
+      },
+      "news_evidence": [
+        {
+          "title": "Aseanexpress [아세안익스프레스] 한화시스템, 2023년 실적 개선으로 영업이익 929억 원 달성",
+          "url": "https://www.aseanexpress.co.kr/news/article.html?no=9653",
+          "content": "February 24, 2024 - 한화시스템이 2023년 실적을 발표했다. 사업부의 실적 호조에 외형 성장과 수익성이 모두 개선된 것으로 나타났다. 지난 2월 23일 2023년 연결 재무제표 기준으로 한화시스템은 매출 2조 4,531억 원을 달성해 2022년 대비 12.1%",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.76,
+          "cosine_score": 6.04,
+          "semantic_score": 8.5
+        },
+        {
+          "title": "Company Guide 한화시스템(A272210) | Snapshot | 기업정보 | Company Guide",
+          "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A272210",
+          "content": "PER(Price Earning Ratio)전일자 보통주 수정주가 / 최근 결산 EPS(주당순이익)  * 최근결산은 2024/12 (연간) 기준임.PER)22.04 12M PER 전일자 보통주 수정주가 / 12개월 Forward EPS12M PER)39.51 업종 PER 시장대표업종||SUM(구성종목 시가총액)/SUM(구성종목 당기순이익) * 당기순이익은 최근결산 2024/12 (연간) 기준임.업종 PER)14.37 PBR(Price Book-value Ratio)전일자 보통주 수정주가 / 최근 결산기 BPS(주당순자산)  * 최근결산은 2024/12 (연간) 기준임.PBR)3.97 배당수익률{최근 결산기 보통주 DPS(현금, 무상조정) / 전일자 보통주 수정주가} *100 8.13 Image 2: 외국인 지분율,시가총액 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")   유동주식수 = 지수산정주식수-(최대주주등(본인+특별관계자)+우리사주+자사주+보호예수+정부기관(5%이상)+해외DR).유동주식수/비율)(보통주) | 71,277,144 / 37.73 | 거래량/거래대금(NXT)(억원) | 980,995 / 519 | Image 4: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 6: 투자의견,적정주가,수정주가 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\") Image 10: PBR 밴드 차트 : 자세한 내용은 클릭후 팝업창 참고; \"클릭:차트데이터 새창열림\")",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.1,
+          "cosine_score": 5.59,
+          "semantic_score": 7.75
+        },
+        {
+          "title": "Hanwhasystems 재무정보 | 한화시스템",
+          "url": "https://www.hanwhasystems.com/kr/investment/financial-info.do",
+          "content": "*    Defense우주・항공감시・정찰지휘통제・통신・사이버해양시스템지상통합체계지원  ICT시스템 통합(SI)운영 서비스(ITO)SolutionDigital Transformation   사업영역  *    ESGESG 경영ESG 등급ESG 공시지속가능경영보고서  Environmental환경안전보건 경영환경영향관리기후변화 대응ECO-YHES  Social임직원품질경영동반성장사회공헌  Governance기업지배구조윤리 및 컴플라이언스리스크 관리정보보호제보운영   지속가능경영  *    주식정보주가정보주식현황주주환원 현황  재무정보재무제표실적발표IR일정사업보고서감사보고서  공시정보공시자료공시관리규정공고  기업지배구조주주총회이사회 및 위원회정관 및 규정기업지배구조   투자정보  *    인재상인사제도채용안내직무소개 인재채용  Image 3 주가정보 재무제표 지속가능경영보고서 채용안내 뉴스레터 전체 학생 투자자 고객 일반 사용자 ESG *   ESG Image 16 Image 17 *   ### 매출액 단위: 억원 *   ### 영업이익 단위: 억원 *   ### 당기순이익 단위: 억원 ### 연결 손익계산서 단위: 억원 *   ### 매출액 단위: 억원 *   ### 영업이익 단위: 억원 *   ### 당기순이익 단위: 억원 *   ### 2024년 사업보고서 *   ### 2023년 사업보고서 *   ### 2022년 사업보고서 *   ### 2021년 사업보고서 *   ### 2024년 감사보고서 *   ### 2023년 감사보고서 *   ### 2022년 감사보고서 *   ### 2021년 감사보고서",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.66,
+          "cosine_score": 4.13,
+          "semantic_score": 7.75
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 6.04,
+            "semantic_analysis_score": 8.5,
+            "hybrid_relevance_score": 7.76,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 실적 개선과 매출 증가가 직접적으로 매출액증가율에 긍정적인 영향을 미침"
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 발표 시점이 2023년 실적을 기준으로 하여 최근 분기와 밀접하게 연결됨"
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "한화시스템의 주요 사업영역인 방산 및 IT 서비스와 관련된 실적 개선 내용"
+              },
+              "financial_impact": {
+                "score": 8,
+                "explanation": "뉴스 내용이 매출 증가와 영업이익 개선을 포함하고 있어 재무성과에 긍정적인 영향을 미칠 것으로 예상"
+              },
+              "overall_semantic_score": 8.5,
+              "reasoning": "뉴스 내용이 매출액증가율의 이상치와 밀접하게 관련되어 있으며, 실적 개선이 직접적인 원인으로 작용할 가능성이 높음"
+            },
+            "news_info": {
+              "title": "Aseanexpress [아세안익스프레스] 한화시스템, 2023년 실적 개선으로 영업이익 929억 원 달성",
+              "url": "https://www.aseanexpress.co.kr/news/article.html?no=9653",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.59,
+            "semantic_analysis_score": 7.75,
+            "hybrid_relevance_score": 7.1,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 제공된 재무 지표들은 회사의 전반적인 재무 상태를 나타내며, 매출액 증가율에 긍정적인 영향을 미칠 수 있는 요소들로 해석될 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 2024년 결산 기준으로 작성되었으며, 최근 분기의 매출액 증가율과 관련성이 높음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 한화시스템의 주요 사업 영역인 방산 및 IT 서비스와 관련된 재무 지표를 다루고 있어 높은 일치성을 보임."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 재무 지표들이 매출 증가에 긍정적인 영향을 미칠 것으로 예상되며, 이는 향후 재무 성과에 실질적인 영향을 미칠 가능성이 있음."
+              },
+              "overall_semantic_score": 7.75,
+              "reasoning": "뉴스 내용과 재무 지표 간의 관계가 긍정적이며, 시간적 및 사업적 일치성이 높아 종합적으로 긍정적인 평가를 내릴 수 있음."
+            },
+            "news_info": {
+              "title": "Company Guide 한화시스템(A272210) | Snapshot | 기업정보 | Company Guide",
+              "url": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?gicode=A272210",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.13,
+            "semantic_analysis_score": 7.75,
+            "hybrid_relevance_score": 6.66,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 다양한 사업 영역이 매출 증가에 긍정적인 영향을 미칠 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 내용이 최신 분기와 관련이 있으며, 매출액 증가율이 최근 실적을 반영하고 있음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 사업 영역이 한화시스템의 주요 사업과 직접적으로 관련되어 있음."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스 내용이 매출 증가에 기여할 가능성이 높아, 재무성과에 긍정적인 영향을 미칠 것으로 예상됨."
+              },
+              "overall_semantic_score": 7.75,
+              "reasoning": "뉴스 내용이 한화시스템의 매출 증가와 관련된 긍정적인 요소를 포함하고 있으며, 사업 영역과의 일치성도 높아 재무지표에 긍정적인 영향을 미칠 것으로 판단됨."
+            },
+            "news_info": {
+              "title": "Hanwhasystems 재무정보 | 한화시스템",
+              "url": "https://www.hanwhasystems.com/kr/investment/financial-info.do",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 7.18,
+          "max_hybrid_score": 7.76,
+          "relevant_news_count": 3
+        }
+      },
+      "search_info": {
+        "final_query": "한화시스템 매출액증가율 이상치 26.82, 동종업계 평균 2.32 초과 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T13:16:26.593593"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "PER",
+        "description": "17.22로 동종업계 평균인 80.25를 78.5%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "한화시스템의 PER이 동종업계 평균보다 현저히 낮은 이유는 최근 실적 부진이나 시장의 부정적 전망 때문일 수 있음.",
+        "confidence_level": 8,
+        "supporting_evidence": [],
+        "detailed_explanation": "한화시스템의 PER이 17.22로 동종업계 평균인 80.25를 크게 하회하고 있어, 이는 회사의 수익성이나 성장 가능성에 대한 시장의 우려를 반영할 수 있다. 최근 관련 뉴스가 없다는 점은 추가적인 정보 부족으로 인해 분석의 한계를 나타내며, 이는 투자자들이 회사에 대한 신뢰를 잃었을 가능성을 시사한다. 따라서, PER의 이상치는 회사의 재무적 건강성에 대한 의구심을 나타내는 지표로 해석될 수 있다.",
+        "news_sources": [],
+        "impact_assessment": "PER의 이상치는 투자자 신뢰도에 부정적인 영향을 미칠 수 있으며, 이는 주가 하락으로 이어질 가능성이 있다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 0/10으로 관련 뉴스가 전혀 없음."
+      },
+      "news_evidence": [],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 4.47,
+            "semantic_analysis_score": 3.0,
+            "hybrid_relevance_score": 3.44,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 3,
+                "explanation": "뉴스 내용이 미국 국가 부채에 대한 정보로, 한화시스템의 PER에 직접적인 영향을 미치기 어렵다."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 직접적인 연결이 부족하다."
+              },
+              "business_alignment": {
+                "score": 2,
+                "explanation": "뉴스 내용이 한화시스템의 주요 사업영역과 관련이 없다."
+              },
+              "financial_impact": {
+                "score": 2,
+                "explanation": "뉴스가 재무성과에 미치는 영향이 거의 없을 것으로 예상된다."
+              },
+              "overall_semantic_score": 3,
+              "reasoning": "뉴스 내용이 한화시스템의 재무지표와 관련성이 낮고, 직접적인 영향이 없기 때문에 전반적으로 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "U.S. National Debt Clock : Real Time",
+              "url": "https://usdebtclock.org/",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 4.08,
+            "semantic_analysis_score": 1.75,
+            "hybrid_relevance_score": 2.45,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 2,
+                "explanation": "뉴스 내용이 암호화폐와 관련된 법적 문제에 대한 것으로, 한화시스템의 사업과 직접적인 연관성이 없음."
+              },
+              "temporal_relevance": {
+                "score": 3,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 직접적인 연결이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용이 한화시스템의 주요 사업영역인 방산 및 IT와 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 한화시스템의 재무성과에 미치는 영향이 거의 없음."
+              },
+              "overall_semantic_score": 1.75,
+              "reasoning": "뉴스 내용이 한화시스템의 사업과 관련이 없고, 재무지표에 미치는 영향이 매우 제한적이므로 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "Новости криптовалют - Investing.com",
+              "url": "https://ru.investing.com/news/cryptocurrency-news",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 3.09,
+            "semantic_analysis_score": 1.25,
+            "hybrid_relevance_score": 1.8,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 1,
+                "explanation": "뉴스 내용은 한화시스템의 사업과 관련이 없으며, 재무지표에 직접적인 영향을 미칠 요소가 없음."
+              },
+              "temporal_relevance": {
+                "score": 2,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 연결성이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용은 한화시스템의 주요 사업영역과 전혀 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 거의 없으며, 측정 가능한 재무적 변화가 예상되지 않음."
+              },
+              "overall_semantic_score": 1.25,
+              "reasoning": "뉴스 내용이 한화시스템의 재무지표와 관련이 없고, 사업 영역과도 일치하지 않기 때문에 전반적으로 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "스압) 초6때부터 8년간 여동생이랑 ㅅㅅ한 썰 - 유머 채널 | 아카라이브",
+              "url": "https://arca.live/b/singbung/68586499",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 2.56,
+          "max_hybrid_score": 3.44,
+          "relevant_news_count": 0
+        }
+      },
+      "search_info": {
+        "final_query": "한화시스템 PER 이상치 17.22, 동종업계 평균 80.25 하회 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 0
+      },
+      "timestamp": "2025-08-14T13:16:56.109542"
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+{
+  "success": true,
+  "analysis_method": "hybrid_relevance_check",
+  "methodology": {
+    "cosine_similarity_weight": 0.3,
+    "llm_semantic_weight": 0.7,
+    "relevance_threshold": 6.0,
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "company_info": {
+    "기업명": "삼성생명보험(주)",
+    "영문기업명": "Samsung Life Insurance co., Ltd",
+    "종목코드": "032830",
+    "대표자명": "홍원학",
+    "법인구분": "Y",
+    "법인등록번호": "1101110005953",
+    "사업자등록번호": "1048126688",
+    "주소": "서울특별시 서초구 서초대로74길 11 (서초동) 삼성생명보험 주식회사",
+    "업종코드": "65110",
+    "설립일": "19570404",
+    "결산월": "12",
+    "업종": "보험업",
+    "제품군": "생명보험,부동산 임대",
+    "Current_credit_grade": "B-"
+  },
+  "analysis_summary": {
+    "total_anomalies": 3,
+    "successful_analyses": 3,
+    "analysis_timestamp": "2025-08-14T13:52:21.721948"
+  },
+  "anomaly_news_analyses": [
+    {
+      "anomaly_info": {
+        "metric_name": "ROE",
+        "description": "4.43로 동종업계 평균인 2.36를 87.4%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "삼성생명보험의 높은 ROE는 최근 재무 성과 개선에 기인함.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 삼성생명보험의 재무정보와 안정성, 성장성에 대한 긍정적인 평가.",
+          "뉴스 2: 삼성생명보험의 사업 분석 및 경쟁사 비교에서 상위 위치를 차지함.",
+          "뉴스 3: 다양한 상품 판매와 관련된 정보가 긍정적인 재무 성과에 기여."
+        ],
+        "detailed_explanation": "삼성생명보험은 최근 재무 성과가 개선되면서 ROE가 동종업계 평균을 크게 초과하는 수치를 기록했습니다. 이는 회사의 안정성과 성장성이 높아지고 있음을 나타내며, 경쟁사 대비 우위를 점하고 있다는 분석이 뒷받침됩니다. 또한, 다양한 보험 상품의 판매가 증가하면서 수익성이 향상된 것으로 보입니다.",
+        "news_sources": [
+          "https://www.catch.co.kr/Comp/CompInfo/870021",
+          "https://www.catch.co.kr/Comp/AnalysisCompView?ID=2391"
+        ],
+        "impact_assessment": "삼성생명보험의 높은 ROE는 투자자들에게 긍정적인 신호로 작용할 수 있으며, 향후 자본 조달 및 투자 유치에 유리하게 작용할 가능성이 높음.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 양호"
+      },
+      "news_evidence": [
+        {
+          "title": "Catch 삼성생명보험 재무평가 - 전체 상위 3% | 캐치",
+          "url": "https://www.catch.co.kr/Comp/CompInfo/870021",
+          "content": "삼성생명보험 재무평가 점수는? 삼성생명보험의 최근 재무정보, 재무제표, 매출액을 토대로 한 안정성과 성장성, 동종업계 위치를 확인하세요!",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.4,
+          "cosine_score": 7.18,
+          "semantic_score": 7.5
+        },
+        {
+          "title": "Catch 삼성생명보험 분석리포트 2024 ver. ㅣ캐치",
+          "url": "https://www.catch.co.kr/Comp/AnalysisCompView?ID=2391",
+          "content": "삼성생명보험 분석리포트 2024 ver. 한눈에 보는 삼성생명보험 사업분석, 경쟁사비교1957년 설립된 삼성생명보험은 사망, 장애, 질병, 사고 및 기타 사건에 대하여 광범위한 보호를 제공하는 보장성 보험상품 및 연금/저축성",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.16,
+          "cosine_score": 7.54,
+          "semantic_score": 7.0
+        },
+        {
+          "title": "Kcgiam 삼성생명보험 판매 상품",
+          "url": "https://kcgiam.com/pension/seller_product.php?sel_code=0023&p_id=seller",
+          "content": "*   Image 1 *   Image 6: 전체메뉴 Image 8: 닫기 Image 9 goPage=View&idx=5&sel_code=0023&p_id=seller&fund_cd=2116)[KCGI코리아퇴직연금증권자 [주식] C-Pe2 (수수료미징구-온라인-퇴직연금) 높은 위험 기준일 : 1,361.99 955.65 -0.09 22.19 32.43 38.43 78.24 97.87 135.54](https://kcgiam.com/pension/seller_product.php? goPage=View&idx=10&sel_code=0023&p_id=seller&fund_cd=3024)[KCGI샐러리맨증권자투자신탁 [주식-재간접형] C-Pe2 (수수료미징구-온라인-퇴직연금) 다소 높은 위험 기준일 : 1,668.31 65.48 2.95 9.24 2.79 21.48 34.87 57.30 80.38](https://kcgiam.com/pension/seller_product.php? goPage=View&idx=45&sel_code=0023&p_id=seller&fund_cd=4069)[KCGI글로벌성장기반증권자투자신탁 [주식] C-Pe2 (수수료미징구-온라인-퇴직연금) 높은 위험 기준일 : 1,143.35 24.98 3.44 7.72 -7.94 16.93 1.35 28.22 29.96](https://kcgiam.com/pension/seller_product.php? *   - 주식형 펀드는 주식시장 급락 시 손실이 발생할 수 있습니다. *   - 펀드에서 투자하는 대상국가의 시장, 정치 및 경제상황 등에 따른 위험으로 자산가치의 손실이 발생할 수 있습니다. *   - 외화자산에 투자하는 펀드의 경우 헤지여부, 헤지비율 및 환율변동 등에 따라 손실이 발생할 수 있습니다. *   - 하이일드 채권에 투자하는 펀드의 경우 투자원금 손실이 크게 발생할 수 있습니다. Image 15",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.07,
+          "cosine_score": 5.06,
+          "semantic_score": 6.5
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 7.18,
+            "semantic_analysis_score": 7.5,
+            "hybrid_relevance_score": 7.4,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 삼성생명보험의 재무평가 점수를 언급하고 있어, 긍정적인 인식이 ROE에 간접적으로 영향을 미칠 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스가 최근 재무정보를 기반으로 작성되었으며, ROE 측정 시점과 일치할 가능성이 높음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성생명보험의 재무상태와 관련된 정보로, 회사의 주요 사업영역과 밀접하게 연결됨."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스가 긍정적인 재무평가를 제공함으로써 투자자 신뢰를 높이고, 이는 ROE에 긍정적인 영향을 미칠 수 있음."
+              },
+              "overall_semantic_score": 7.5,
+              "reasoning": "뉴스 내용이 삼성생명보험의 재무지표와 관련이 깊고, 긍정적인 인식을 통해 ROE에 영향을 미칠 가능성이 높음."
+            },
+            "news_info": {
+              "title": "Catch 삼성생명보험 재무평가 - 전체 상위 3% | 캐치",
+              "url": "https://www.catch.co.kr/Comp/CompInfo/870021",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 7.54,
+            "semantic_analysis_score": 7.0,
+            "hybrid_relevance_score": 7.16,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 삼성생명보험의 사업 분석이 이루어졌지만, ROE에 직접적인 영향을 미치는 요소는 언급되지 않음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스가 2024년 분석 리포트로 최신 분기와 관련이 있을 가능성이 높음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성생명보험의 주요 사업 영역인 보험 및 연금 상품과 관련이 있음."
+              },
+              "financial_impact": {
+                "score": 5,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적일 수 있으나, 긍정적인 인식이 ROE에 간접적으로 기여할 가능성 있음."
+              },
+              "overall_semantic_score": 7,
+              "reasoning": "뉴스 내용이 삼성생명보험의 사업 영역과 관련이 깊고, 시간적으로도 적합하지만, ROE에 대한 직접적인 인과관계는 약함."
+            },
+            "news_info": {
+              "title": "Catch 삼성생명보험 분석리포트 2024 ver. ㅣ캐치",
+              "url": "https://www.catch.co.kr/Comp/AnalysisCompView?ID=2391",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 5.06,
+            "semantic_analysis_score": 6.5,
+            "hybrid_relevance_score": 6.07,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 6,
+                "explanation": "뉴스에서 언급된 상품들이 삼성생명보험의 판매 상품으로, 이는 고객의 투자 선택에 영향을 미칠 수 있으나 직접적인 ROE 변화와의 연관성은 낮음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점이 최신 분기와 일치하지만, ROE는 과거의 성과를 반영하므로 직접적인 연결성은 약함."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 삼성생명보험의 주요 사업 영역인 보험 및 투자 상품과 관련이 있음."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스가 고객의 투자 결정에 영향을 미칠 수 있어 중장기적으로 ROE에 긍정적인 영향을 미칠 가능성이 있음."
+              },
+              "overall_semantic_score": 6.5,
+              "reasoning": "뉴스 내용이 삼성생명보험의 사업과 관련이 있지만, ROE에 대한 직접적인 영향은 제한적이며, 시간적 적합성도 약간의 한계가 있음."
+            },
+            "news_info": {
+              "title": "Kcgiam 삼성생명보험 판매 상품",
+              "url": "https://kcgiam.com/pension/seller_product.php?sel_code=0023&p_id=seller",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 6.88,
+          "max_hybrid_score": 7.4,
+          "relevant_news_count": 3
+        }
+      },
+      "search_info": {
+        "final_query": "삼성생명보험 ROE 이상치 4.43, 동종업계 평균 2.36 초과 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T13:51:18.857470"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "PER",
+        "description": "10.86로 동종업계 평균인 6.13를 77.1%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "삼성생명보험의 PER이 동종업계 평균을 크게 초과함.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 삼성의 다양한 사업 영역 소개",
+          "뉴스 2: 삼성생명보험의 평균 연봉 정보"
+        ],
+        "detailed_explanation": "삼성생명보험의 PER이 10.86으로 동종업계 평균인 6.13을 77.1%p 초과하여 이상치로 탐지되었습니다. 이는 회사의 수익성이나 성장 가능성에 대한 시장의 기대가 반영된 결과일 수 있습니다. 또한, 삼성그룹의 브랜드 가치와 안정성도 PER에 긍정적인 영향을 미쳤을 가능성이 있습니다.",
+        "news_sources": [
+          "https://www.samsung.com/us/about-us/our-business/?msockid=33334572855762e1057b533a84ad63f5",
+          "https://www.jobkorea.co.kr/company/1632733/salary"
+        ],
+        "impact_assessment": "PER의 이상치는 투자자들에게 삼성생명보험의 주가가 과대평가되었음을 시사할 수 있으며, 이는 향후 주가 조정의 위험을 내포하고 있습니다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 평균 관련성 점수 4.25/10으로 낮음"
+      },
+      "news_evidence": [
+        {
+          "title": "Our Business | About Us | Samsung US",
+          "url": "https://www.samsung.com/us/about-us/our-business/?msockid=33334572855762e1057b533a84ad63f5",
+          "content": "Discover the areas in which Samsung operates, including consumer electronics, IT & mobile communications, device solutions, and more.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.41,
+          "cosine_score": 6.35,
+          "semantic_score": 5.0
+        },
+        {
+          "title": "삼성생명보험 연봉정보 - 평균연봉 15,040만원 | 잡코리아",
+          "url": "https://www.jobkorea.co.kr/company/1632733/salary",
+          "content": "삼성생명보험 . 삼성그룹 계열사. 생명 보험업. 86. 서울외국환중개.",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.29,
+          "cosine_score": 5.98,
+          "semantic_score": 5.0
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 6.35,
+            "semantic_analysis_score": 5.0,
+            "hybrid_relevance_score": 5.41,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 3,
+                "explanation": "뉴스 내용은 삼성의 다양한 사업 영역을 소개하고 있으나, 재무지표인 PER에 직접적인 영향을 미치는 요소는 포함되어 있지 않음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점이 명시되어 있지 않지만, 최신 분기 재무지표와의 연결성이 불분명함."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스는 삼성의 사업 영역을 다루고 있으며, 삼성생명보험의 사업과는 간접적으로 관련이 있을 수 있음."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적이며, 직접적인 재무적 변화는 기대하기 어려움."
+              },
+              "overall_semantic_score": 5,
+              "reasoning": "뉴스 내용이 삼성의 사업 영역을 다루고 있지만, 재무지표에 대한 직접적인 영향은 미미하며, 시간적 적합성도 불확실함."
+            },
+            "news_info": {
+              "title": "Our Business | About Us | Samsung US",
+              "url": "https://www.samsung.com/us/about-us/our-business/?msockid=33334572855762e1057b533a84ad63f5",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.98,
+            "semantic_analysis_score": 5.0,
+            "hybrid_relevance_score": 5.29,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 4,
+                "explanation": "뉴스는 삼성생명보험의 연봉 정보를 제공하지만, 이는 PER 지표에 직접적인 영향을 미치지 않음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점과 재무지표 측정 시점이 명확히 연결되지 않음."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용은 삼성생명보험의 사업 영역인 생명 보험업과 관련이 있음."
+              },
+              "financial_impact": {
+                "score": 3,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적이며, PER 지표에 직접적인 영향을 주지 않음."
+              },
+              "overall_semantic_score": 5,
+              "reasoning": "뉴스는 삼성생명보험의 연봉 정보를 다루고 있으나, 이는 PER 지표와의 직접적인 연관성이 낮고, 재무적 영향도 제한적임."
+            },
+            "news_info": {
+              "title": "삼성생명보험 연봉정보 - 평균연봉 15,040만원 | 잡코리아",
+              "url": "https://www.jobkorea.co.kr/company/1632733/salary",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 3.92,
+            "semantic_analysis_score": 1.25,
+            "hybrid_relevance_score": 2.05,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 1,
+                "explanation": "뉴스 내용이 삼성생명보험의 재무지표에 직접적 영향을 미칠 요소가 없음."
+              },
+              "temporal_relevance": {
+                "score": 2,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 연결성이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용이 삼성생명보험의 주요 사업영역과 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 재무성과에 미치는 영향이 없음."
+              },
+              "overall_semantic_score": 1.25,
+              "reasoning": "뉴스 내용이 삼성생명보험의 재무지표와 관련이 없으며, 인과관계나 사업영역 일치성도 전혀 없음."
+            },
+            "news_info": {
+              "title": "스압) 초6때부터 8년간 여동생이랑 ㅅㅅ한 썰 - 유머 채널 | 아카라이브",
+              "url": "https://arca.live/b/singbung/68586499",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 4.25,
+          "max_hybrid_score": 5.41,
+          "relevant_news_count": 0
+        }
+      },
+      "search_info": {
+        "final_query": "삼성생명보험 PER 이상치 10.86, 동종업계 평균 6.13 초과 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 2
+      },
+      "timestamp": "2025-08-14T13:51:48.317786"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "부채비율",
+        "description": "최신 분기(848.14)가 1년 전 동분기 값(670.34) 대비 26.5% 증가",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "time_series",
+        "source": "timeseries_analysis"
+      },
+      "analysis": {
+        "primary_cause": "부채비율 증가의 주요 원인은 보험 상품 판매 증가에 따른 자산 및 부채의 동반 증가로 보인다.",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: 삼성생명보험의 최근 재무정보와 안정성 분석",
+          "뉴스 2: 삼성생명보험의 사업 분석 및 경쟁사 비교",
+          "뉴스 3: 삼성생명보험의 판매 상품 관련 정보"
+        ],
+        "detailed_explanation": "삼성생명보험은 최근 다양한 보험 상품을 판매하며 매출이 증가하고 있는 것으로 보인다. 이러한 판매 증가에 따라 자산이 늘어나는 동시에 부채도 증가하여 부채비율이 상승한 것으로 추정된다. 특히, 보장성 보험상품 및 연금/저축성 상품의 판매가 증가하면서 부채가 증가했을 가능성이 있다.",
+        "news_sources": [
+          "https://www.catch.co.kr/Comp/CompInfo/870021",
+          "https://www.catch.co.kr/Comp/AnalysisCompView?ID=2391"
+        ],
+        "impact_assessment": "부채비율의 증가가 중간 정도의 심각도로 평가되며, 이는 투자자들에게 신뢰성에 대한 우려를 불러일으킬 수 있다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 평균 관련성 점수 6.04/10으로 적절한 관련성을 보임"
+      },
+      "news_evidence": [
+        {
+          "title": "Catch 삼성생명보험 재무평가 - 전체 상위 3% | 캐치",
+          "url": "https://www.catch.co.kr/Comp/CompInfo/870021",
+          "content": "삼성생명보험 재무평가 점수는? 삼성생명보험의 최근 재무정보, 재무제표, 매출액을 토대로 한 안정성과 성장성, 동종업계 위치를 확인하세요!",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.73,
+          "cosine_score": 7.25,
+          "semantic_score": 6.5
+        },
+        {
+          "title": "Catch 삼성생명보험 분석리포트 2024 ver. ㅣ캐치",
+          "url": "https://www.catch.co.kr/Comp/AnalysisCompView?ID=2391",
+          "content": "삼성생명보험 분석리포트 2024 ver. 한눈에 보는 삼성생명보험 사업분석, 경쟁사비교1957년 설립된 삼성생명보험은 사망, 장애, 질병, 사고 및 기타 사건에 대하여 광범위한 보호를 제공하는 보장성 보험상품 및 연금/저축성",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 6.06,
+          "cosine_score": 6.77,
+          "semantic_score": 5.75
+        },
+        {
+          "title": "Kcgiam 삼성생명보험 판매 상품",
+          "url": "https://kcgiam.com/pension/seller_product.php?sel_code=0023&p_id=seller",
+          "content": "*   Image 1 *   Image 6: 전체메뉴 Image 8: 닫기 Image 9 goPage=View&idx=5&sel_code=0023&p_id=seller&fund_cd=2116)[KCGI코리아퇴직연금증권자 [주식] C-Pe2 (수수료미징구-온라인-퇴직연금) 높은 위험 기준일 : 1,361.99 955.65 -0.09 22.19 32.43 38.43 78.24 97.87 135.54](https://kcgiam.com/pension/seller_product.php? goPage=View&idx=10&sel_code=0023&p_id=seller&fund_cd=3024)[KCGI샐러리맨증권자투자신탁 [주식-재간접형] C-Pe2 (수수료미징구-온라인-퇴직연금) 다소 높은 위험 기준일 : 1,668.31 65.48 2.95 9.24 2.79 21.48 34.87 57.30 80.38](https://kcgiam.com/pension/seller_product.php? goPage=View&idx=45&sel_code=0023&p_id=seller&fund_cd=4069)[KCGI글로벌성장기반증권자투자신탁 [주식] C-Pe2 (수수료미징구-온라인-퇴직연금) 높은 위험 기준일 : 1,143.35 24.98 3.44 7.72 -7.94 16.93 1.35 28.22 29.96](https://kcgiam.com/pension/seller_product.php? *   - 주식형 펀드는 주식시장 급락 시 손실이 발생할 수 있습니다. *   - 펀드에서 투자하는 대상국가의 시장, 정치 및 경제상황 등에 따른 위험으로 자산가치의 손실이 발생할 수 있습니다. *   - 외화자산에 투자하는 펀드의 경우 헤지여부, 헤지비율 및 환율변동 등에 따라 손실이 발생할 수 있습니다. *   - 하이일드 채권에 투자하는 펀드의 경우 투자원금 손실이 크게 발생할 수 있습니다. Image 15",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 5.35,
+          "cosine_score": 4.41,
+          "semantic_score": 5.75
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 7.25,
+            "semantic_analysis_score": 6.5,
+            "hybrid_relevance_score": 6.73,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스는 삼성생명보험의 재무평가 점수를 언급하지만, 부채비율 증가에 대한 직접적인 원인이나 영향은 명시되지 않음."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스가 최신 분기와 관련된 재무정보를 다루고 있어 시간적으로 적합함."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용이 삼성생명보험의 재무상태와 관련된 정보로, 회사의 주요 사업영역과 밀접하게 연결됨."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 부채비율 증가에 대한 직접적인 언급이 없으므로, 재무성과에 미치는 영향은 제한적일 것으로 보임."
+              },
+              "overall_semantic_score": 6.5,
+              "reasoning": "뉴스는 삼성생명보험의 재무상태에 대한 정보를 제공하지만, 부채비율 증가와의 직접적인 연관성은 부족하여 종합적인 영향은 제한적임."
+            },
+            "news_info": {
+              "title": "Catch 삼성생명보험 재무평가 - 전체 상위 3% | 캐치",
+              "url": "https://www.catch.co.kr/Comp/CompInfo/870021",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 6.77,
+            "semantic_analysis_score": 5.75,
+            "hybrid_relevance_score": 6.06,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스는 삼성생명보험의 사업 분석을 다루고 있으나, 부채비율 증가에 대한 직접적인 원인이나 해결책을 제시하지 않음."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스가 2024년 분석 리포트로 최신 분기와 관련이 있지만, 구체적인 시점이 명시되지 않아 연결성이 다소 약함."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 삼성생명보험의 주요 사업 영역인 보험 및 연금 상품과 관련이 있어 높은 일치성을 보임."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "뉴스가 부채비율에 대한 직접적인 영향을 미치지 않지만, 회사의 전반적인 신뢰도와 투자자 신뢰에 간접적인 영향을 줄 수 있음."
+              },
+              "overall_semantic_score": 5.75,
+              "reasoning": "뉴스는 삼성생명보험의 사업 분석을 다루고 있으나, 부채비율 증가와의 직접적인 연관성은 낮고, 시간적 적합성도 다소 부족하여 종합적인 점수는 중간 수준."
+            },
+            "news_info": {
+              "title": "Catch 삼성생명보험 분석리포트 2024 ver. ㅣ캐치",
+              "url": "https://www.catch.co.kr/Comp/AnalysisCompView?ID=2391",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 4.41,
+            "semantic_analysis_score": 5.75,
+            "hybrid_relevance_score": 5.35,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스에서 언급된 상품들이 삼성생명보험의 판매 상품으로, 부채비율에 직접적인 영향을 미치는 요소는 아니지만, 판매 증가가 장기적으로 재무지표에 긍정적인 영향을 줄 수 있음."
+              },
+              "temporal_relevance": {
+                "score": 6,
+                "explanation": "뉴스 시점이 최신 분기와 관련이 있지만, 구체적인 판매 성과나 재무지표 변화에 대한 정보는 부족함."
+              },
+              "business_alignment": {
+                "score": 8,
+                "explanation": "뉴스 내용이 삼성생명보험의 주요 사업영역인 보험 및 금융 상품과 관련이 있어 높은 일치성을 보임."
+              },
+              "financial_impact": {
+                "score": 4,
+                "explanation": "단기적으로는 부채비율에 큰 영향을 미치지 않지만, 장기적으로 판매 증가가 이루어질 경우 긍정적인 재무성과를 기대할 수 있음."
+              },
+              "overall_semantic_score": 5.75,
+              "reasoning": "뉴스 내용이 삼성생명보험의 사업과 관련이 있지만, 부채비율에 대한 직접적인 영향은 제한적이며, 장기적인 관점에서 긍정적인 영향을 미칠 가능성이 있음."
+            },
+            "news_info": {
+              "title": "Kcgiam 삼성생명보험 판매 상품",
+              "url": "https://kcgiam.com/pension/seller_product.php?sel_code=0023&p_id=seller",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 6.04,
+          "max_hybrid_score": 6.73,
+          "relevant_news_count": 2
+        }
+      },
+      "search_info": {
+        "final_query": "삼성생명보험 부채비율 848.14, 1년 전 670.34 대비 증가 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T13:52:21.719939"
+    }
+  ]
+}

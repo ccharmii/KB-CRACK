@@ -1,0 +1,10 @@
+{
+    "매출액증가율": {
+        "type": "time_series",
+        "metric_name": "매출액증가율",
+        "description": "41.91로 과거 4분기 평균인 123.86를 벗어나는 이상치 탐지 (표준편차 2.0배 하회)",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "timeseries_analysis"
+    }
+}

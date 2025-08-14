@@ -1,0 +1,18 @@
+{
+  "company_name": "한화시스템",
+  "current_credit_grade": "A+",
+  "corp_code": "00339391",
+  "start_time": "2025-08-14T13:09:45.375510",
+  "output_directory": "analysis_results\\한화시스템",
+  "steps_completed": [
+    "financial_analysis",
+    "non_financial_analysis",
+    "financial_reasoning",
+    "news_analysis",
+    "final_report"
+  ],
+  "steps_failed": [],
+  "latest_quarter": "2025Q1",
+  "end_time": "2025-08-14T13:20:41.704091",
+  "total_duration": "0:10:56.328581"
+}

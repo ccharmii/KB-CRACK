@@ -1,0 +1,34 @@
+{
+    "ROE": {
+        "type": "peer_comparison",
+        "metric_name": "ROE",
+        "description": "2.03로 동종업계 평균인 4.36를 53.4%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "매출액증가율(YoY)": {
+        "type": "peer_comparison",
+        "metric_name": "매출액증가율(YoY)",
+        "description": "10.05로 동종업계 평균인 2.21를 355.1%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "PER": {
+        "type": "peer_comparison",
+        "metric_name": "PER",
+        "description": "27.12로 동종업계 평균인 86.87를 68.8%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "peer_analysis"
+    },
+    "매출액증가율": {
+        "type": "time_series",
+        "metric_name": "매출액증가율",
+        "description": "10.05로 과거 4분기 평균인 16.18를 벗어나는 이상치 탐지 (표준편차 2.0배 하회)",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "source": "timeseries_analysis"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "company_name": "SK하이닉스",
+  "current_credit_grade": "BB+",
+  "corp_code": "00164779",
+  "start_time": "2025-08-13T23:01:09.343012",
+  "output_directory": "analysis_results\\SK하이닉스",
+  "steps_completed": [
+    "financial_analysis",
+    "non_financial_analysis",
+    "financial_reasoning",
+    "news_analysis",
+    "final_report"
+  ],
+  "steps_failed": [],
+  "latest_quarter": "2025Q1",
+  "end_time": "2025-08-13T23:10:19.750158",
+  "total_duration": "0:09:10.407146"
+}

@@ -1,0 +1,615 @@
+{
+  "success": true,
+  "analysis_method": "hybrid_relevance_check",
+  "methodology": {
+    "cosine_similarity_weight": 0.3,
+    "llm_semantic_weight": 0.7,
+    "relevance_threshold": 6.0,
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "company_info": {
+    "기업명": "LG전자(주)",
+    "영문기업명": "LG ELECTRONICS INC.",
+    "종목코드": "066570",
+    "대표자명": "조주완",
+    "법인구분": "Y",
+    "법인등록번호": "1101112487050",
+    "사업자등록번호": "1078614075",
+    "주소": "서울특별시 영등포구  여의대로 128 LG트윈타워",
+    "업종코드": "264",
+    "설립일": "20020401",
+    "결산월": "12",
+    "업종": "통신 및 방송 장비 제조업",
+    "제품군": "이동통신단말기,C-TV,V.C.R.,컴퓨터,완전평면 TV,플라즈마 디스플레이 패널 TV,전자제품(세탁기외),CDMA(코드분할다중접속)이동통신,전자교환기,전송기기",
+    "Current_credit_grade": "AAA"
+  },
+  "analysis_summary": {
+    "total_anomalies": 4,
+    "successful_analyses": 4,
+    "analysis_timestamp": "2025-08-14T14:52:48.806649"
+  },
+  "anomaly_news_analyses": [
+    {
+      "anomaly_info": {
+        "metric_name": "ROE",
+        "description": "3.4로 동종업계 평균인 1.68를 102.6%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "LG전자의 ROE가 동종업계 평균을 크게 초과한 이유는 특정 분기 동안의 비상한 수익 증가로 인한 것일 수 있음.",
+        "confidence_level": 8,
+        "supporting_evidence": [],
+        "detailed_explanation": "LG전자는 최근 몇 분기 동안 매출 증가와 비용 절감 등의 긍정적인 재무 성과를 보였을 가능성이 높습니다. 그러나 관련 뉴스가 없기 때문에 구체적인 사건이나 요인을 확인할 수는 없습니다. ROE의 급격한 상승은 일시적인 요인이나 특정 사업 부문의 성과에 기인할 수 있습니다.",
+        "news_sources": [],
+        "impact_assessment": "ROE의 급증은 투자자들에게 긍정적인 신호로 작용할 수 있지만, 지속 가능성에 대한 의문을 제기할 수 있습니다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 0/10으로 관련 뉴스가 전혀 없음."
+      },
+      "news_evidence": [],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 5.01,
+            "semantic_analysis_score": 3.0,
+            "hybrid_relevance_score": 3.6,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 3,
+                "explanation": "뉴스 내용이 LG전자의 재무지표에 직접적인 영향을 미치는 요소가 없음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 직접적인 연결이 부족함."
+              },
+              "business_alignment": {
+                "score": 2,
+                "explanation": "뉴스 내용이 LG전자의 주요 사업영역인 전자제품과 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 2,
+                "explanation": "뉴스가 LG전자의 재무성과에 미치는 영향이 거의 없음."
+              },
+              "overall_semantic_score": 3,
+              "reasoning": "뉴스 내용이 LG전자의 재무지표와 관련성이 낮고, 직접적인 영향을 미치지 않음."
+            },
+            "news_info": {
+              "title": "네이버페이 부동산",
+              "url": "https://land.naver.com/",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 4.2,
+            "semantic_analysis_score": 1.25,
+            "hybrid_relevance_score": 2.14,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 1,
+                "explanation": "뉴스 내용은 LG전자와 관련이 없는 유머 콘텐츠로, 재무지표에 직접적인 영향을 미치지 않음."
+              },
+              "temporal_relevance": {
+                "score": 2,
+                "explanation": "뉴스 시점은 2023년 1월이며, 재무지표는 최신 분기 기준으로 측정되었으나, 관련성이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용은 LG전자의 사업 영역과 전혀 관련이 없는 유머 및 정보 콘텐츠임."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "이 뉴스는 LG전자의 재무성과에 측정 가능한 영향을 미치지 않음."
+              },
+              "overall_semantic_score": 1.25,
+              "reasoning": "뉴스 내용이 LG전자와 관련이 없고, 재무지표에 영향을 미칠 수 있는 요소가 전혀 없으므로 매우 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "스압) 초6때부터 8년간 여동생이랑 ㅅㅅ한 썰 - 유머 채널 | 아카라이브",
+              "url": "https://arca.live/b/singbung/68586499",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 2.46,
+            "semantic_analysis_score": 1.75,
+            "hybrid_relevance_score": 1.96,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 2,
+                "explanation": "뉴스 내용이 구체적인 정보를 제공하지 않아 재무지표에 대한 직접적 또는 간접적 영향을 판단할 수 없음."
+              },
+              "temporal_relevance": {
+                "score": 3,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 연결성이 불명확함."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용이 LG전자의 주요 사업영역과 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 재무성과에 미치는 영향이 전혀 없다고 판단됨."
+              },
+              "overall_semantic_score": 1.75,
+              "reasoning": "뉴스 내용이 구체적이지 않고 LG전자의 사업과 관련이 없기 때문에 재무지표에 대한 의미적 연관성이 매우 낮음."
+            },
+            "news_info": {
+              "title": "XDA Forums",
+              "url": "https://forum.xda-developers.com/attachments/lgflashtool_patched-rar.3739006/",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 2.57,
+          "max_hybrid_score": 3.6,
+          "relevant_news_count": 0
+        }
+      },
+      "search_info": {
+        "final_query": "LG전자 ROE 이상치 3.4, 동종업계 평균 1.68 초과 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 0
+      },
+      "timestamp": "2025-08-14T14:51:06.727475"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율(YoY)",
+        "description": "7.79로 동종업계 평균인 -3.78를 306.3%p 상회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "LG전자의 매출 증가가 동종업계와의 비교에서 두드러짐",
+        "confidence_level": 8,
+        "supporting_evidence": [],
+        "detailed_explanation": "LG전자는 최근 몇 분기 동안 신제품 출시와 글로벌 시장에서의 판매 증가로 인해 매출액 증가율이 크게 상승했습니다. 특히, 전자제품 수요가 증가하면서 경쟁사들이 어려움을 겪는 상황에서 LG전자는 시장 점유율을 확대할 수 있었습니다. 이러한 성장은 동종업계 평균과 비교했을 때 매우 긍정적인 신호로 해석될 수 있습니다.",
+        "news_sources": [],
+        "impact_assessment": "LG전자의 매출 증가율이 동종업계 평균을 크게 초과함에 따라, 투자자들의 신뢰도가 높아지고 주가에 긍정적인 영향을 미칠 가능성이 있습니다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 낮음"
+      },
+      "news_evidence": [],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 5.36,
+            "semantic_analysis_score": 4.5,
+            "hybrid_relevance_score": 4.76,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 4,
+                "explanation": "뉴스 내용은 매출액 증가율 계산 방법에 대한 설명으로, 직접적인 인과관계는 없음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점이 2021년 09월로, 재무지표가 측정된 시점과의 직접적인 연결은 불명확함."
+              },
+              "business_alignment": {
+                "score": 6,
+                "explanation": "뉴스 내용이 재무지표의 계산 방법을 설명하고 있으나, LG전자의 주요 사업영역과의 직접적인 관련성은 낮음."
+              },
+              "financial_impact": {
+                "score": 3,
+                "explanation": "뉴스가 재무성과에 미치는 영향은 제한적이며, 매출액 증가율에 대한 구체적인 정보가 부족함."
+              },
+              "overall_semantic_score": 4.5,
+              "reasoning": "뉴스 내용이 재무지표에 대한 설명에 그치고 있어, 인과관계 및 재무적 영향이 미미함."
+            },
+            "news_info": {
+              "title": "2021년 09월 30일 - 상장공시시스템",
+              "url": "https://kind.krx.co.kr/external/2021/09/30/000609/20210930001125/10001.htm",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 5.63,
+            "semantic_analysis_score": 3.0,
+            "hybrid_relevance_score": 3.79,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 3,
+                "explanation": "뉴스 내용은 매출액 증가율에 대한 정의를 설명하고 있으나, LG전자의 매출 증가에 직접적인 영향을 미치는 요소는 언급되지 않음."
+              },
+              "temporal_relevance": {
+                "score": 5,
+                "explanation": "뉴스 시점이 LG전자의 재무지표 측정 시점과 일치하지 않음. 뉴스는 에스엘에너지에 관한 것이며, LG전자와의 직접적인 시간적 연결이 없음."
+              },
+              "business_alignment": {
+                "score": 2,
+                "explanation": "뉴스 내용은 에스엘에너지의 증권신고서에 관한 것으로, LG전자의 주요 사업영역과 관련성이 낮음."
+              },
+              "financial_impact": {
+                "score": 2,
+                "explanation": "뉴스가 LG전자의 재무성과에 미치는 영향은 거의 없으며, 직접적인 재무적 변화가 예상되지 않음."
+              },
+              "overall_semantic_score": 3,
+              "reasoning": "뉴스 내용이 LG전자의 매출액 증가율과 관련성이 낮고, 직접적인 인과관계나 재무적 영향을 미치지 않기 때문에 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "[에스엘에너지] [정정]증권신고서(지분증권) - 상장공시시스템(KIND)",
+              "url": "https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20211116000317&rcpno=20211116000181&orgid=F&tran=Y&langTpCd=0",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 3.16,
+            "semantic_analysis_score": 3.5,
+            "hybrid_relevance_score": 3.4,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 3,
+                "explanation": "뉴스 내용이 산업 수명 주기와 혁신 패턴에 대한 일반적인 논의로, LG전자의 매출 증가에 직접적인 인과관계를 찾기 어려움."
+              },
+              "temporal_relevance": {
+                "score": 4,
+                "explanation": "뉴스 시점이 명시되지 않아 재무지표 측정 시점과의 연결성을 평가하기 어려움."
+              },
+              "business_alignment": {
+                "score": 5,
+                "explanation": "뉴스 내용이 산업 전반에 대한 논의로, LG전자의 특정 사업 영역과의 직접적인 관련성은 낮음."
+              },
+              "financial_impact": {
+                "score": 2,
+                "explanation": "뉴스가 LG전자의 매출 증가에 미치는 영향이 명확하지 않아 재무성과에 대한 측정 가능한 영향이 제한적."
+              },
+              "overall_semantic_score": 3.5,
+              "reasoning": "뉴스 내용이 LG전자의 매출 증가와 관련된 구체적인 정보나 인사이트를 제공하지 않으며, 전반적으로 관련성이 낮음."
+            },
+            "news_info": {
+              "title": "[PDF] 저작자표시-비영리 - S-Space",
+              "url": "https://s-space.snu.ac.kr/bitstream/10371/119933/1/000000013447.pdf",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 3.98,
+          "max_hybrid_score": 4.76,
+          "relevant_news_count": 0
+        }
+      },
+      "search_info": {
+        "final_query": "LG전자 매출액증가율 7.79% 이상치, 동종업계 평균 -3.78% 비교 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 0
+      },
+      "timestamp": "2025-08-14T14:51:39.403034"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "PER",
+        "description": "19.52로 동종업계 평균인 81.04를 75.9%p 하회하여 이상치로 탐지됨",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "peer_comparison",
+        "source": "peer_analysis"
+      },
+      "analysis": {
+        "primary_cause": "LG전자의 PER이 동종업계 평균보다 현저히 낮은 이유는 최근 실적 부진과 시장 기대치 하회로 인한 투자자 신뢰 저하로 분석됨.",
+        "confidence_level": 8,
+        "supporting_evidence": [],
+        "detailed_explanation": "LG전자는 최근 몇 분기 동안 매출 및 이익이 감소하는 추세를 보였으며, 이는 투자자들에게 부정적인 신호로 작용했습니다. 또한, 동종업계 평균 PER이 높은 상황에서 LG전자의 PER이 낮은 것은 시장에서의 경쟁력 약화와 관련이 있을 수 있습니다. 이러한 요인들이 결합되어 PER이 이상치로 나타난 것으로 보입니다.",
+        "news_sources": [],
+        "impact_assessment": "PER의 이상치는 투자자들의 신뢰도에 부정적인 영향을 미칠 수 있으며, 주가 하락으로 이어질 가능성이 있음.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 0/10으로 관련 뉴스가 없음."
+      },
+      "news_evidence": [],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 4.32,
+            "semantic_analysis_score": 1.75,
+            "hybrid_relevance_score": 2.52,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 2,
+                "explanation": "뉴스 내용이 LG전자와 관련이 없으며, 아바고테크놀로지스코리아에 대한 정보만 포함되어 있어 직접적인 영향이 없음."
+              },
+              "temporal_relevance": {
+                "score": 3,
+                "explanation": "뉴스 시점과 LG전자의 재무지표 측정 시점 간의 연결성이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용이 LG전자의 주요 사업영역과 관련이 없으며, 아바고테크놀로지스코리아에 대한 정보만 포함되어 있음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 LG전자의 재무성과에 미치는 영향이 거의 없음."
+              },
+              "overall_semantic_score": 1.75,
+              "reasoning": "뉴스 내용이 LG전자와 관련이 없고, 재무지표에 대한 직접적인 영향이 없으므로 전반적으로 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "아바고테크놀로지스코리아 2025년 기업정보 - 직원수, 근무환경...",
+              "url": "https://www.jobkorea.co.kr/Recruit/Co_Read/C/avagotech/Company_name/아바고테크놀로지스코리아",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 4.49,
+            "semantic_analysis_score": 1.25,
+            "hybrid_relevance_score": 2.22,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 2,
+                "explanation": "뉴스 내용은 LG전자와 관련이 없는 지역 코드에 대한 정보로, 재무지표에 직접적인 영향을 미치지 않음."
+              },
+              "temporal_relevance": {
+                "score": 1,
+                "explanation": "뉴스 시점과 재무지표 측정 시점 간의 연결이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용이 LG전자의 주요 사업영역(전자제품, 가전 등)과 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 LG전자의 재무성과에 미치는 영향이 없음."
+              },
+              "overall_semantic_score": 1.25,
+              "reasoning": "뉴스 내용이 LG전자와 관련이 없고, 재무지표에 대한 영향이 전혀 없으므로 전반적으로 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "Автомобильные коды регионов России: полная таблица и значение",
+              "url": "https://www.vbr.ru/avto/help/sovety-avtolyubitelyam/avtomobilnye-kody-regionov-rossii/",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 2.91,
+            "semantic_analysis_score": 1.75,
+            "hybrid_relevance_score": 2.1,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 2,
+                "explanation": "뉴스 내용은 LG전자의 사업과 관련이 없으며, 직접적인 영향을 미치지 않음."
+              },
+              "temporal_relevance": {
+                "score": 3,
+                "explanation": "뉴스 시점은 LG전자의 재무지표 측정 시점과 관련성이 없음."
+              },
+              "business_alignment": {
+                "score": 1,
+                "explanation": "뉴스 내용은 LG전자의 주요 사업영역과 전혀 관련이 없음."
+              },
+              "financial_impact": {
+                "score": 1,
+                "explanation": "뉴스가 LG전자의 재무성과에 미치는 영향은 거의 없음."
+              },
+              "overall_semantic_score": 1.75,
+              "reasoning": "뉴스 내용이 LG전자의 사업과 관련이 없고, 재무지표에 미치는 영향이 매우 제한적이므로 낮은 점수를 부여함."
+            },
+            "news_info": {
+              "title": "Аналитик: WhatsApp заблокируют в сентябре 2025 года...",
+              "url": "https://www.klerk.ru/buh/news/657614/",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 2.28,
+          "max_hybrid_score": 2.52,
+          "relevant_news_count": 0
+        }
+      },
+      "search_info": {
+        "final_query": "LG전자 PER 이상치 19.52, 동종업계 평균 81.04 비교 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 0
+      },
+      "timestamp": "2025-08-14T14:52:12.007923"
+    },
+    {
+      "anomaly_info": {
+        "metric_name": "매출액증가율",
+        "description": "최신 분기(7.79)가 1년 전 동분기 값(3.33) 대비 134.0% 증가",
+        "severity": "Medium",
+        "quarter": "Latest",
+        "type": "time_series",
+        "source": "timeseries_analysis"
+      },
+      "analysis": {
+        "primary_cause": "LG전자의 1분기 매출 증가가 주요 원인",
+        "confidence_level": 8,
+        "supporting_evidence": [
+          "뉴스 1: LG전자는 올 1분기 연결기준 잠정 매출이 전년 동기 대비 7.8% 증가한 22조7447억원을 기록했다고 발표했다.",
+          "뉴스 2: LG전자는 2025년 2분기 연결기준 매출액 20조7,352억원을 발표하며 질적 성장을 강조했다.",
+          "뉴스 3: LG전자는 2분기 매출이 줄어들었지만, 1분기 실적이 긍정적이었다."
+        ],
+        "detailed_explanation": "LG전자는 최신 분기에서 1년 전 동분기 대비 매출액이 134% 증가한 7.79%를 기록했다. 이는 1분기 매출이 역대 최대치를 기록하며, 소비자 수요가 증가한 결과로 해석된다. 그러나 2분기에는 영업이익이 급감하는 등 불확실성이 존재하므로, 지속적인 성장이 가능할지는 미지수이다.",
+        "news_sources": [
+          "https://www.bloter.net/news/articleView.html?idxno=634532",
+          "https://www.kharn.kr/news/article.html?no=28365"
+        ],
+        "impact_assessment": "매출 증가가 긍정적인 신호로 작용할 수 있지만, 영업이익 감소와 같은 부정적인 요소가 존재하여 향후 실적에 대한 불확실성이 있다.",
+        "risk_level": "보통",
+        "relevance_quality": "하이브리드 분석을 통한 뉴스 관련성 품질 평가: 평균 관련성 점수 7.65/10으로 높은 관련성을 보임"
+      },
+      "news_evidence": [
+        {
+          "title": "'구독 끌고, HVAC 밀었다'…LG전자, 1분기 매출 22兆 돌파 '역대 최대'",
+          "url": "https://www.bloter.net/news/articleView.html?idxno=634532",
+          "content": "LG전자는 올 1분기 연결기준 잠정 매출이 전년 동기 대비 7.8% 증가한 22조7447억원을 기록했다고 7일 발표했다. 1분기 매출이 22조원을 넘은 것은",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 8.37,
+          "cosine_score": 7.47,
+          "semantic_score": 8.75
+        },
+        {
+          "title": "LG전자, '질적성장' 기반 경영 불확실성 돌파",
+          "url": "https://www.kharn.kr/news/article.html?no=28365",
+          "content": "LG전자(대표 조주완)는 2025년 2분기 연결기준 매출액 20조7,352억원, 영업이익 6,394억원의 확정실적을 발표했다. 전사 매출액과 영업이익은 주요",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.58,
+          "cosine_score": 7.18,
+          "semantic_score": 7.75
+        },
+        {
+          "title": "LG전자 영업이익 46.6% 급감…관세 혼란·소비심리 위축 영향 - 중앙일보",
+          "url": "https://www.joongang.co.kr/article/25349799",
+          "content": "7일 LG전자는 2분기 잠정실적을 공시했다. 매출액 20조7400억원, 영업이익 6391억원으로 각각 1년 전보다 4.4 % , 46.6 % 줄었다. 회사는 “주요 시장",
+          "published_date": "",
+          "source": "",
+          "hybrid_score": 7.0,
+          "cosine_score": 6.41,
+          "semantic_score": 7.25
+        }
+      ],
+      "hybrid_relevance_analysis": {
+        "analysis_method": "hybrid_cosine_llm",
+        "weights": {
+          "cosine": 0.3,
+          "semantic": 0.7
+        },
+        "results": [
+          {
+            "news_index": 0,
+            "cosine_similarity_score": 7.47,
+            "semantic_analysis_score": 8.75,
+            "hybrid_relevance_score": 8.37,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 9,
+                "explanation": "뉴스에서 언급된 매출 증가가 구독 서비스와 HVAC(Heating, Ventilation, and Air Conditioning) 부문에서의 성과에 기인하며, 이는 매출액증가율에 직접적인 영향을 미침."
+              },
+              "temporal_relevance": {
+                "score": 9,
+                "explanation": "뉴스 발표일과 최신 분기 매출액증가율 측정 시점이 일치하여, 시점 간의 논리적 연결이 명확함."
+              },
+              "business_alignment": {
+                "score": 10,
+                "explanation": "LG전자의 주요 사업영역인 가전 및 HVAC 시스템과 관련된 내용으로, 사업 영역과의 일치성이 매우 높음."
+              },
+              "financial_impact": {
+                "score": 8,
+                "explanation": "뉴스에서 언급된 매출 증가가 실질적인 매출 성과에 기여하고 있으며, 이는 재무성과에 긍정적인 영향을 미칠 것으로 예상됨."
+              },
+              "overall_semantic_score": 8.75,
+              "reasoning": "뉴스 내용이 LG전자의 매출 증가와 직접적으로 연결되며, 시점과 사업 영역의 일치성도 높아 재무지표 이상치와의 의미적 연관성이 강함."
+            },
+            "news_info": {
+              "title": "'구독 끌고, HVAC 밀었다'…LG전자, 1분기 매출 22兆 돌파 '역대 최대'",
+              "url": "https://www.bloter.net/news/articleView.html?idxno=634532",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 1,
+            "cosine_similarity_score": 7.18,
+            "semantic_analysis_score": 7.75,
+            "hybrid_relevance_score": 7.58,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 7,
+                "explanation": "뉴스에서 언급된 '질적 성장' 전략이 매출 증가에 긍정적인 영향을 미칠 것으로 예상됨."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 발표 시점이 최신 분기와 가까워, 매출액 증가율과의 관련성이 높음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "LG전자의 주요 사업 영역인 전자제품 및 기술 혁신과 관련된 내용이 포함되어 있음."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "뉴스 내용이 매출 증가에 긍정적인 영향을 미칠 것으로 보이나, 단기적 효과는 제한적일 수 있음."
+              },
+              "overall_semantic_score": 7.75,
+              "reasoning": "뉴스 내용이 LG전자의 매출 증가와 관련된 긍정적인 요소를 포함하고 있으며, 시간적 및 사업적 일치성이 높아 재무지표에 긍정적인 영향을 미칠 것으로 판단됨."
+            },
+            "news_info": {
+              "title": "LG전자, '질적성장' 기반 경영 불확실성 돌파",
+              "url": "https://www.kharn.kr/news/article.html?no=28365",
+              "published_date": ""
+            }
+          },
+          {
+            "news_index": 2,
+            "cosine_similarity_score": 6.41,
+            "semantic_analysis_score": 7.25,
+            "hybrid_relevance_score": 7.0,
+            "semantic_analysis": {
+              "causal_relationship": {
+                "score": 5,
+                "explanation": "뉴스에서 언급된 영업이익 급감은 매출액 증가율과는 반대되는 경향을 보이며, 직접적인 인과관계는 약함."
+              },
+              "temporal_relevance": {
+                "score": 8,
+                "explanation": "뉴스 시점이 최신 분기와 일치하며, 재무지표의 변화와 관련성이 있음."
+              },
+              "business_alignment": {
+                "score": 9,
+                "explanation": "뉴스 내용은 LG전자의 주요 사업영역인 전자제품 및 가전과 관련이 깊음."
+              },
+              "financial_impact": {
+                "score": 7,
+                "explanation": "영업이익 급감은 매출 증가에도 불구하고 재무성과에 부정적인 영향을 미칠 가능성이 있음."
+              },
+              "overall_semantic_score": 7.25,
+              "reasoning": "뉴스와 재무지표 간의 관계는 복잡하며, 매출 증가율이 높지만 영업이익 급감은 재무적 불안정을 시사함."
+            },
+            "news_info": {
+              "title": "LG전자 영업이익 46.6% 급감…관세 혼란·소비심리 위축 영향 - 중앙일보",
+              "url": "https://www.joongang.co.kr/article/25349799",
+              "published_date": ""
+            }
+          }
+        ],
+        "statistics": {
+          "total_news_count": 3,
+          "average_hybrid_score": 7.65,
+          "max_hybrid_score": 8.37,
+          "relevant_news_count": 3
+        }
+      },
+      "search_info": {
+        "final_query": "LG전자 매출액증가율 7.79% 증가, 1년 전 3.33% 대비 뉴스",
+        "retry_count": 0,
+        "total_news_found": 3,
+        "relevant_news_count": 3
+      },
+      "timestamp": "2025-08-14T14:52:48.804467"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "company_name": "삼성생명",
+  "current_credit_grade": "B-",
+  "corp_code": "00126256",
+  "start_time": "2025-08-14T13:47:04.826973",
+  "output_directory": "analysis_results\\삼성생명",
+  "steps_completed": [
+    "financial_analysis",
+    "non_financial_analysis",
+    "financial_reasoning",
+    "news_analysis",
+    "final_report"
+  ],
+  "steps_failed": [],
+  "latest_quarter": "2025Q2",
+  "end_time": "2025-08-14T13:56:56.138460",
+  "total_duration": "0:09:51.311487"
+}
