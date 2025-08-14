@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ company_name }} - KB 신용위험 분석</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FFD700 0%, #FFF8DC 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 6px solid #FFD700;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .company-title {
+            font-size: 2.5em;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .back-btn {
+            background: #FFD700;
+            color: #333;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #FFC107;
+            transform: translateY(-2px);
+        }
+        
+        .ai-summary {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FF4500;
+        }
+        
+        .ai-summary h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ai-summary h3::before {
+            content: "🤖";
+            margin-right: 10px;
+        }
+        
+        .credit-grades {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .grade-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .grade-box h4 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .grade {
+            font-size: 2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #FFD700;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section h2::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: #FFD700;
+        }
+        
+        .full-width {
+            grid-column: span 2;
+        }
+        
+        .anomaly-list {
+            margin-bottom: 20px;
+        }
+        
+        .anomaly-item {
+            background: #FFF9E6;
+            border: 1px solid #FFD700;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #FF9800;
+        }
+        
+        .anomaly-header {
+            font-weight: bold;
+            color: #E65100;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .anomaly-description {
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .severity {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .severity-medium {
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+        
+        .severity-high {
+            background: #FFEBEE;
+            color: #D32F2F;
+        }
+        
+        .severity-low {
+            background: #E8F5E8;
+            color: #2E7D32;
+        }
+        
+        .metric-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .metric-table th,
+        .metric-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .metric-table th {
+            background: #F5F5F5;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .metric-table tr:hover {
+            background: #FFFBF0;
+        }
+        
+        .news-item {
+            background: #F8F9FA;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007BFF;
+        }
+        
+        .news-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .news-content {
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .news-meta {
+            font-size: 0.9em;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .news-link {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .news-link:hover {
+            text-decoration: underline;
+        }
+        
+        .risk-indicator {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .risk-high {
+            background: #FFEBEE;
+            color: #D32F2F;
+        }
+        
+        .risk-medium {
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+        
+        .risk-low {
+            background: #E8F5E8;
+            color: #2E7D32;
+        }
+        
+        .evidence-section {
+            background: #F8F9FA;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .evidence-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .evidence-list {
+            list-style: none;
+        }
+        
+        .evidence-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ddd;
+            color: #666;
+        }
+        
+        .evidence-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background: #F8F9FA;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #E9ECEF;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007BFF;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .grade-aaa, .grade-aa { background: #4CAF50; color: white; }
+        .grade-a { background: #8BC34A; color: white; }
+        .grade-bbb { background: #CDDC39; color: #333; }
+        .grade-bb, .grade-b { background: #FF9800; color: white; }
+        .grade-ccc { background: #F44336; color: white; }
+        
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .collapsible {
+            background: #F1F1F1;
+            color: #333;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .collapsible:hover {
+            background: #E1E1E1;
+        }
+        
+        .collapsible-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #FAFAFA;
+        }
+        
+        .collapsible.active + .collapsible-content {
+            max-height: 500px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <div class="header-top">
+                <h1 class="company-title">{{ company_name }}</h1>
+                <a href="/" class="back-btn">← 기업 목록</a>
+            </div>
+            
+            <!-- AI 종합 분석 요약 -->
+            {% if company_data.comprehensive and company_data.comprehensive.AI_종합_분석_요약 %}
+            <div class="ai-summary">
+                <h3>AI 종합 분석 요약</h3>
+                <p>{{ company_data.comprehensive.AI_종합_분석_요약 }}</p>
+            </div>
+            {% endif %}
+            
+            <!-- 신용등급 정보 -->
+            <div class="credit-grades">
+                {% if company_data.comprehensive and company_data.comprehensive.예상_신용등급_변화 %}
+                <div class="grade-box">
+                    <h4>현재 신용등급</h4>
+                    <div class="grade grade-{{ company_data.comprehensive.예상_신용등급_변화.현재_등급.lower().replace('+', '').replace('-', '') }}">
+                        {{ company_data.comprehensive.예상_신용등급_변화.현재_등급 }}
+                    </div>
+                </div>
+                <div class="grade-box">
+                    <h4>예상 신용등급</h4>
+                    <div class="grade grade-{{ company_data.comprehensive.예상_신용등급_변화.예상_등급.lower().replace('+', '').replace('-', '') }}">
+                        {{ company_data.comprehensive.예상_신용등급_변화.예상_등급 }}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if company_data.comprehensive and company_data.comprehensive.종합_위험평가 %}
+                <div class="grade-box">
+                    <h4>종합 위험점수</h4>
+                    <div class="stat-value">{{ company_data.comprehensive.종합_위험평가.score }}/100</div>
+                    <div class="stat-label">{{ company_data.comprehensive.종합_위험평가.grade }}등급</div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- 메인 컨텐츠 -->
+        <div class="main-content">
+            <!-- 재무지표 이상치 -->
+            <div class="section">
+                <h2>📊 재무지표 이상치 분석</h2>
+                {% if company_data.comprehensive and company_data.comprehensive.재무지표_분석 and company_data.comprehensive.재무지표_분석.이상치_목록 %}
+                <div class="anomaly-list">
+                    {% for metric_name, anomaly in company_data.comprehensive.재무지표_분석.이상치_목록.items() %}
+                    <div class="anomaly-item">
+                        <div class="anomaly-header">
+                            {{ metric_name }}
+                            <span class="severity severity-{{ anomaly.severity.lower() }}">{{ anomaly.severity }}</span>
+                        </div>
+                        <div class="anomaly-description">{{ anomaly.description }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="no-data">재무지표 이상치가 발견되지 않았습니다.</div>
+                {% endif %}
+            </div>
+            
+            <!-- 비재무지표 이상치 -->
+            <div class="section">
+                <h2>📋 비재무지표 위험 분석</h2>
+                {% if company_data.comprehensive and company_data.comprehensive.비재무지표_분석 and company_data.comprehensive.비재무지표_분석.탐지된_이상치 %}
+                <div class="anomaly-list">
+                    {% for anomaly in company_data.comprehensive.비재무지표_분석.탐지된_이상치 %}
+                    <div class="anomaly-item">
+                        <div class="anomaly-header">
+                            {{ anomaly.indicator_name }}
+                            <span class="severity severity-{% if anomaly.score <= 2 %}high{% elif anomaly.score <= 3 %}medium{% else %}low{% endif %}">
+                                {{ anomaly.grade_label }}
+                            </span>
+                        </div>
+                        <div class="anomaly-description">{{ anomaly.rationale }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="no-data">비재무지표 위험요소가 발견되지 않았습니다.</div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- 이상치 근거 분석 -->
+        {% if company_data.comprehensive and company_data.comprehensive.재무지표_분석 and company_data.comprehensive.재무지표_분석.통합_근거_분석 %}
+        <div class="section full-width">
+            <h2>🔍 이상치 근거 분석</h2>
+            {% for analysis in company_data.comprehensive.재무지표_분석.통합_근거_분석 %}
+            <button class="collapsible">{{ analysis.메트릭명 }} 상세 분석</button>
+            <div class="collapsible-content">
+                <div class="evidence-section">
+                    <div class="evidence-title">📰 뉴스 분석 근거</div>
+                    {% if analysis.뉴스_분석 %}
+                    <p><strong>주요 원인:</strong> {{ analysis.뉴스_분석.주요_원인 }}</p>
+                    <p><strong>상세 설명:</strong> {{ analysis.뉴스_분석.상세_설명 }}</p>
+                    <p><strong>신뢰도:</strong> {{ analysis.뉴스_분석.신뢰도 }}/10</p>
+                    
+                    {% if analysis.뉴스_증거 %}
+                    <div style="margin-top: 15px;">
+                        <strong>관련 뉴스:</strong>
+                        {% for news in analysis.뉴스_증거 %}
+                        <div class="news-item">
+                            <div class="news-title">{{ news.제목 }}</div>
+                            <div class="news-content">{{ news.내용_요약 }}</div>
+                            <div class="news-meta">
+                                <span>관련성: {{ "%.1f"|format(news.관련성_점수) }}/10</span>
+                                {% if news.URL %}
+                                <a href="{{ news.URL }}" target="_blank" class="news-link">뉴스 원문 보기</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+                
+                {% if analysis.비재무_분석 %}
+                <div class="evidence-section">
+                    <div class="evidence-title">📋 비재무 분석 근거</div>
+                    <p><strong>설명:</strong> {{ analysis.비재무_분석.설명 }}</p>
+                    <p><strong>신뢰도:</strong> {{ "%.0f"|format(analysis.비재무_분석.신뢰도 * 100) }}%</p>
+                    
+                    {% if analysis.비재무_분석.주요_원인 %}
+                    <div style="margin-top: 10px;">
+                        <strong>주요 원인:</strong>
+                        <ul class="evidence-list">
+                        {% for cause in analysis.비재무_분석.주요_원인 %}
+                            <li>{{ cause }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% if analysis.비재무_분석.관련_문장 %}
+                    <div style="margin-top: 10px;">
+                        <strong>관련 문장:</strong>
+                        <ul class="evidence-list">
+                        {% for sentence in analysis.비재무_분석.관련_문장 %}
+                            <li>"{{ sentence }}"</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <!-- 데일리 뉴스 위험 분석 -->
+        {% if company_data.daily_news %}
+        <div class="section full-width">
+            <h2>📰 데일리 뉴스 위험 분석</h2>
+            
+            {% if company_data.daily_news.company_analysis_summary %}
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">{{ company_data.daily_news.company_analysis_summary.총_이상치수 or 0 }}</div>
+                    <div class="stat-label">총 이상징후</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">{{ company_data.daily_news.총_뉴스_수 or 0 }}</div>
+                    <div class="stat-label">총 뉴스 수</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">{{ company_data.daily_news.관련_뉴스_수 or 0 }}</div>
+                    <div class="stat-label">관련 뉴스</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">{{ company_data.daily_news.company_analysis_summary.overall_risk_level or 'N/A' }}</div>
+                    <div class="stat-label">위험 수준</div>
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if company_data.daily_news.company_analysis_summary and company_data.daily_news.company_analysis_summary.key_concerns %}
+            <div class="evidence-section">
+                <div class="evidence-title">🚨 주요 우려사항</div>
+                <ul class="evidence-list">
+                {% for concern in company_data.daily_news.company_analysis_summary.key_concerns %}
+                    <li>{{ concern }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            
+            {% if company_data.daily_news.relevant_news %}
+            <div style="margin-top: 25px;">
+                <h3 style="margin-bottom: 15px; color: #333;">관련 뉴스 목록</h3>
+                {% for news in company_data.daily_news.relevant_news %}
+                <div class="news-item">
+                    <div class="news-title">{{ news.title }}</div>
+                    {% if news.content %}
+                    <div class="news-content">{{ news.content[:200] }}{% if news.content|length > 200 %}...{% endif %}</div>
+                    {% endif %}
+                    <div class="news-meta">
+                        <span>검색 키워드: {{ news.search_keyword or 'N/A' }}</span>
+                        {% if news.url %}
+                        <a href="{{ news.url }}" target="_blank" class="news-link">원문 보기</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            {% if company_data.daily_news.daily_summary_report %}
+            <div class="evidence-section" style="margin-top: 25px;">
+                <div class="evidence-title">📄 일일 요약 리포트</div>
+                <div style="white-space: pre-line; line-height: 1.6;">{{ company_data.daily_news.daily_summary_report }}</div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <!-- 유사 과거사례 분석 -->
+        {% if company_data.comprehensive and company_data.comprehensive.유사_사례_분석 %}
+        <div class="section full-width">
+            <h2>📚 유사 과거사례 분석</h2>
+            <table class="metric-table">
+                <thead>
+                    <tr>
+                        <th>기업명</th>
+                        <th>연도</th>
+                        <th>이상치 유형</th>
+                        <th>초기등급</th>
+                        <th>최종등급</th>
+                        <th>회복기간</th>
+                        <th>조치사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for case in company_data.comprehensive.유사_사례_분석 %}
+                    <tr>
+                        <td>{{ case.company }}</td>
+                        <td>{{ case.year }}</td>
+                        <td>{{ case.anomaly_type }}</td>
+                        <td><span class="grade grade-{{ case.initial_grade.lower().replace('+', '').replace('-', '') }}">{{ case.initial_grade }}</span></td>
+                        <td><span class="grade grade-{{ case.final_grade.lower().replace('+', '').replace('-', '') }}">{{ case.final_grade }}</span></td>
+                        <td>{{ case.recovery_period }}</td>
+                        <td>{{ case.actions_taken | join(', ') }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        
+        <!-- 기업 기본정보 -->
+        {% if company_data.comprehensive and company_data.comprehensive.기업_정보 %}
+        <div class="section full-width">
+            <h2>🏢 기업 기본정보</h2>
+            <table class="metric-table">
+                <tr>
+                    <th>항목</th>
+                    <th>내용</th>
+                    <th>항목</th>
+                    <th>내용</th>
+                </tr>
+                <tr>
+                    <td>기업명</td>
+                    <td>{{ company_data.comprehensive.기업_정보.기업명 or 'N/A' }}</td>
+                    <td>종목코드</td>
+                    <td>{{ company_data.comprehensive.기업_정보.종목코드 or 'N/A' }}</td>
+                </tr>
+                <tr>
+                    <td>대표자명</td>
+                    <td>{{ company_data.comprehensive.기업_정보.대표자명 or 'N/A' }}</td>
+                    <td>업종</td>
+                    <td>{{ company_data.comprehensive.기업_정보.업종 or 'N/A' }}</td>
+                </tr>
+                <tr>
+                    <td>설립일</td>
+                    <td>{{ company_data.comprehensive.기업_정보.설립일 or 'N/A' }}</td>
+                    <td>결산월</td>
+                    <td>{{ company_data.comprehensive.기업_정보.결산월 or 'N/A' }}월</td>
+                </tr>
+                <tr>
+                    <td colspan="3">주소</td>
+                    <td>{{ company_data.comprehensive.기업_정보.주소 or 'N/A' }}</td>
+                </tr>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+    
+    <script>
+        // 접기/펼치기 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            var collapsibles = document.getElementsByClassName('collapsible');
+            for (var i = 0; i < collapsibles.length; i++) {
+                collapsibles[i].addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
