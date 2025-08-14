@@ -1,0 +1,175 @@
+{
+"credit_rating_downgrade_cases": [
+{
+"company_name": "대한항공",
+"industry": "항공운송업",
+"downgrade_period": {
+"start_date": "2020-03-01",
+"end_date": "2021-06-30"
+},
+"rating_change": {
+"before": "AA-",
+"after": "A",
+"steps": ["AA-", "A+", "A"]
+},
+"warning_signs": [
+"코로나19로 인한 국제선 운항 90% 감소",
+"3개 분기 연속 영업손실 발생",
+"부채비율 200%→350% 급증",
+"현금흐름 악화 및 유동성 위기",
+"정부 지원 의존도 증가",
+"여행 수요 회복 불확실성"
+],
+"financial_impact": {
+"revenue_decline": "65%",
+"operating_loss": "1.2조원",
+"debt_ratio_increase": "75%"
+}
+},
+{
+"company_name": "현대중공업",
+"industry": "조선업",
+"downgrade_period": {
+"start_date": "2016-02-01",
+"end_date": "2017-09-30"
+},
+"rating_change": {
+"before": "A",
+"after": "BBB+",
+"steps": ["A", "A-", "BBB+"]
+},
+"warning_signs": [
+"조선업 불황으로 수주량 70% 급감",
+"3년 연속 영업손실 기록",
+"구조조정비용 1조원 이상 발생",
+"워크아웃 진행 및 채권단 관리",
+"글로벌 조선업 과잉공급 지속",
+"중국 조선업체와의 경쟁 심화"
+],
+"financial_impact": {
+"revenue_decline": "45%",
+"operating_loss": "3.8조원",
+"debt_ratio_increase": "120%"
+}
+},
+{
+"company_name": "한진해운",
+"industry": "해운업",
+"downgrade_period": {
+"start_date": "2015-01-01",
+"end_date": "2016-08-31"
+},
+"rating_change": {
+"before": "BBB",
+"after": "D",
+"steps": ["BBB", "BBB-", "BB", "B", "CCC", "D"]
+},
+"warning_signs": [
+"글로벌 해운업 불황 지속",
+"운임료 급락으로 수익성 악화",
+"높은 고정비용 부담",
+"유동성 부족으로 선박 운항 중단",
+"채권자와의 협상 결렬",
+"법정관리 신청 불가피"
+],
+"financial_impact": {
+"revenue_decline": "80%",
+"operating_loss": "1.7조원",
+"debt_ratio_increase": "무한대"
+}
+},
+{
+"company_name": "롯데홀딩스",
+"industry": "지주회사",
+"downgrade_period": {
+"start_date": "2017-03-01",
+"end_date": "2018-12-31"
+},
+"rating_change": {
+"before": "A+",
+"after": "A-",
+"steps": ["A+", "A", "A-"]
+},
+"warning_signs": [
+"일본 롯데홀딩스와의 경영권 분쟁",
+"중국 사드 보복으로 롯데마트 철수",
+"창업주 일가 검찰 수사 진행",
+"거버넌스 리스크 증대",
+"중국 사업 손실 확대",
+"브랜드 이미지 타격"
+],
+"financial_impact": {
+"revenue_decline": "15%",
+"operating_loss": "0.8조원",
+"debt_ratio_increase": "25%"
+}
+},
+{
+"company_name": "STX조선해양",
+"industry": "조선업",
+"downgrade_period": {
+"start_date": "2013-01-01",
+"end_date": "2014-06-30"
+},
+"rating_change": {
+"before": "BBB+",
+"after": "D",
+"steps": ["BBB+", "BBB-", "BB", "B", "CCC", "D"]
+},
+"warning_signs": [
+"조선업 경기 침체 장기화",
+"과도한 설비투자로 인한 부채 급증",
+"신규 수주 부진 지속",
+"원자재 가격 상승 압박",
+"운영자금 부족으로 생산 중단",
+"회사채 상환 불능 상태"
+],
+"financial_impact": {
+"revenue_decline": "90%",
+"operating_loss": "2.1조원",
+"debt_ratio_increase": "무한대"
+}
+},
+{
+"company_name": "KT&G",
+"industry": "담배제조업",
+"downgrade_period": {
+"start_date": "2019-08-01",
+"end_date": "2020-12-31"
+},
+"rating_change": {
+"before": "AA",
+"after": "AA-",
+"steps": ["AA", "AA-"]
+},
+"warning_signs": [
+"국내 담배 판매량 지속 감소",
+"전자담배 시장 확산으로 점유율 하락",
+"해외 사업 수익성 악화",
+"건강 관련 규제 강화",
+"ESG 투자 확산으로 투자 기피",
+"담배세 인상 압박 지속"
+],
+"financial_impact": {
+"revenue_decline": "8%",
+"operating_loss": "0.1조원",
+"debt_ratio_increase": "10%"
+}
+}
+],
+"common_warning_patterns": [
+"업계 전반의 구조적 불황",
+"연속적인 영업손실 발생",
+"부채비율 급격한 증가",
+"현금흐름 악화",
+"외부 충격 (팬데믹, 정치적 리스크)",
+"거버넌스 이슈",
+"규제 환경 변화",
+"경쟁 환경 악화"
+],
+"rating_scale": {
+"investment_grade": ["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-"],
+"speculative_grade": ["BB+", "BB", "BB-", "B+", "B", "B-", "CCC+", "CCC", "CCC-", "CC", "C"],
+"default": ["D"]
+}
+}

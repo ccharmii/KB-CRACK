@@ -1,0 +1,31 @@
+{
+  "financial_analysis": {
+    "krx_file_path": "data/업종분류현황_250809.csv",
+    "n_years": 2,
+    "max_peers": 5
+  },
+  "non_financial_analysis": {
+    "data_dir": "./data",
+    "force_rerun": false,
+    "max_search_results": 10
+  },
+  "news_analysis": {
+    "max_search_results": 10,
+    "company_data_file": "samsung_company_data.json"
+  },
+  "llm_settings": {
+    "model": "gpt-4o-mini",
+    "temperature": 0.2,
+    "max_tokens": 4000
+  },
+  "output": {
+    "save_intermediate": true,
+    "report_format": "json",
+    "include_raw_data": false
+  },
+  "api_keys": {
+    "openai_api_key_env": "OPENAI_API_KEY",
+    "tavily_api_key_env": "TAVILY_API_KEY",
+    "dart_api_key_env": "DART_API_KEY"
+  }
+}
