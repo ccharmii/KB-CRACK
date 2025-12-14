@@ -18,7 +18,7 @@ KB-CRACK은 기업별 **재무 이상치 탐지 + 비재무 리스크 평가 + �
 | 한윤지 (팀장) | 데이터 통합 및 시각화 | 뉴스 API 수집, 최종 요약 보고서 생성, 화면 구현 |
 ---
 
-## KB-CRACK
+## KB-CRACK 발표 자료
 [![KB-CRACK 발표자료](docs/kb-crack-thumbnail.png)](docs/kb-crack-presentation.pdf)
 
 ---
