@@ -1,13 +1,14 @@
+# /KB-CRACK/templates.py
+# templates 디렉터리와 index.html 템플릿 파일을 생성하는 스크립트
+
 import os
 
+
 def create_templates_folder():
-    """templates 폴더와 필요한 HTML 파일들을 생성하는 함수"""
-    
-    # templates 폴더 생성
-    os.makedirs('templates', exist_ok=True)
-    
-    # index.html 파일 생성
-    index_html = '''<!DOCTYPE html>
+    """templates 디렉터리와 index.html 템플릿 파일을 생성하는 함수"""
+    os.makedirs("templates", exist_ok=True)
+
+    index_html = """<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -260,13 +261,14 @@ def create_templates_folder():
         </div>
     </div>
 </body>
-</html>'''
-    
-    with open('templates/index.html', 'w', encoding='utf-8') as f:
-        f.write(index_html)
-    
-    print("templates/index.html 파일이 생성되었습니다.")
-    print("templates/dashboard.html 파일은 위의 dashboard 아티팩트를 복사하여 생성해주세요.")
+</html>"""
+
+    with open("templates/index.html", "w", encoding="utf-8") as file:
+        file.write(index_html)
+
+    print("templates/index.html 파일이 생성되었습니다")
+    print("templates/dashboard.html 파일은 dashboard 아티팩트를 복사하여 생성 필요")
+
 
 if __name__ == "__main__":
     create_templates_folder()
