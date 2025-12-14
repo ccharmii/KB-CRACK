@@ -1,223 +1,296 @@
-# A유형(사업/반기/분기) 공시 수집 -> 제목 우선 분기 재분류 -> TXT 저장
-import io, os, re, time
-from datetime import datetime, timedelta, date
-from typing import List, Dict
+# /KB-CRACK/non_financial_analysis/dart_api.py
+# A유형 정기공시 수집 및 본문 텍스트 저장
+
+import io
+import os
+import re
+import time
 import zipfile
+from datetime import datetime, timedelta
+from typing import Dict, List
 from zipfile import BadZipFile
+
 import requests
+from lxml import etree, html
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from lxml import etree, html
+
 from .config import (
-    DART_API_KEY, BASE_LIST_URL, BASE_DOC_URL, LIST_LOOKBACK_DAYS,
-    REGULAR_TYPE, REGULAR_DETAIL_ALLOW, TITLE_INCLUDE_KEYS, TITLE_EXCLUDE_KEYS,
-    REPORTS_DIR_NAME
+    BASE_DOC_URL,
+    BASE_LIST_URL,
+    DART_API_KEY,
+    LIST_LOOKBACK_DAYS,
+    REGULAR_DETAIL_ALLOW,
+    REGULAR_TYPE,
+    REPORTS_DIR_NAME,
+    TITLE_EXCLUDE_KEYS,
+    TITLE_INCLUDE_KEYS,
 )
 from .quarter_utils import infer_quarter, last_n_complete_quarters
 
-# 세션 재시도
 _sess = None
-def _session():
+
+
+def _session() -> requests.Session:
+    """재시도 설정이 적용된 requests 세션 반환"""
     global _sess
-    if _sess: 
+    if _sess:
         return _sess
-    s = requests.Session()
-    s.mount("https://", HTTPAdapter(max_retries=Retry(
-        total=5, backoff_factor=0.5,
-        status_forcelist=(429,500,502,503,504),
-        allowed_methods=("GET","POST"),
-    )))
-    _sess = s
+
+    session = requests.Session()
+    session.mount(
+        "https://",
+        HTTPAdapter(
+            max_retries=Retry(
+                total=5,
+                backoff_factor=0.5,
+                status_forcelist=(429, 500, 502, 503, 504),
+                allowed_methods=("GET", "POST"),
+            )
+        ),
+    )
+    _sess = session
     return _sess
 
-# 파일명 전처리
-def _safe(s):
-    s = (s or "").strip()
-    s = re.sub(r"[\\/:*?\"<>|]", "_", s)
-    s = re.sub(r"\s+", " ", s)
-    return s[:160]
 
-# DART 뷰어 링크 생성
-def viewer_url(rcept_no):
+def _safe(text: str) -> str:
+    """파일명에 사용할 수 있도록 문자열 정규화"""
+    text = (text or "").strip()
+    text = re.sub(r'[\\/:*?"<>|]', "_", text)
+    text = re.sub(r"\s+", " ", text)
+    return text[:160]
+
+
+def viewer_url(rcept_no: str) -> str:
+    """DART 뷰어 URL 생성"""
     return f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={rcept_no}"
 
-# “첨부정정/추가서류/추가 제출” 키워드로 첨부성 문서 판별 -> 제외
-def _is_attachment_like(title):
-    t = (title or "")
-    return any(k in t for k in ["첨부정정", "추가서류", "추가 제출"])
 
-# 제목에 정기보고서 키워드가 있는지(+exclude 키워드 제외) 간접 판정
-def _title_says_regular(title):
-    t = (title or "").replace(" ", "")
-    if any(b in t for b in TITLE_EXCLUDE_KEYS): 
+def _is_attachment_like(title: str) -> bool:
+    """첨부성 문서 여부 판정"""
+    title = title or ""
+    return any(keyword in title for keyword in ["첨부정정", "추가서류", "추가 제출"])
+
+
+def _title_says_regular(title: str) -> bool:
+    """제목 기반 정기보고서 여부 판정"""
+    normalized = (title or "").replace(" ", "")
+    if any(keyword in normalized for keyword in TITLE_EXCLUDE_KEYS):
         return False
-    base = set((TITLE_INCLUDE_KEYS or []) + ["사업보고서","반기보고서","분기보고서","제1분기","제2분기","제3분기","제4분기"])
-    return any(k in t for k in base)
 
-# 최근 4개 완료 분기 안에 속하는 보고서 정확히 반환
-def list_regular_reports(corp_code, asof=None):
-    end = datetime(asof.year, asof.month, asof.day) if asof else datetime.today()
-    start = end - timedelta(days=LIST_LOOKBACK_DAYS)
-    sess = _session()
+    base_keywords = set(
+        (TITLE_INCLUDE_KEYS or [])
+        + ["사업보고서", "반기보고서", "분기보고서", "제1분기", "제2분기", "제3분기", "제4분기"]
+    )
+    return any(keyword in normalized for keyword in base_keywords)
+
+
+def list_regular_reports(corp_code: str, asof: datetime | None = None) -> List[Dict]:
+    """
+    최근 완료 분기 범위 내 정기보고서 메타데이터 목록 반환
+    입력: corp_code, asof(기준일)
+    출력: 정기보고서 메타데이터 리스트
+    """
+    end_dt = datetime(asof.year, asof.month, asof.day) if asof else datetime.today()
+    start_dt = end_dt - timedelta(days=LIST_LOOKBACK_DAYS)
+
+    session = _session()
     page = 1
-    raw: List[Dict] = []
+    raw_rows: List[Dict] = []
 
     while True:
         params = {
             "crtfc_key": DART_API_KEY,
             "corp_code": corp_code,
-            "bgn_de": start.strftime("%Y%m%d"),
-            "end_de": end.strftime("%Y%m%d"),
-            "pblntf_ty": REGULAR_TYPE,     # 'A'
+            "bgn_de": start_dt.strftime("%Y%m%d"),
+            "end_de": end_dt.strftime("%Y%m%d"),
+            "pblntf_ty": REGULAR_TYPE,
             "last_reprt_at": "Y",
-            "page_no": page, "page_count": 100,
-            "sort": "date", "sort_mth": "desc",
+            "page_no": page,
+            "page_count": 100,
+            "sort": "date",
+            "sort_mth": "desc",
         }
-        r = sess.get(BASE_LIST_URL, params=params, timeout=30)
-        data = r.json()
+        resp = session.get(BASE_LIST_URL, params=params, timeout=30)
+        data = resp.json()
         items = data.get("list", []) or []
-        if not items and data.get("status") not in ("000",): 
+
+        if not items and data.get("status") not in ("000",):
             break
 
-        for it in items:
-            title = it.get("report_nm") or ""
-            if _is_attachment_like(title): 
-                continue
-            det = (it.get("pblntf_detail_ty") or "").upper()
-            if not ((det in REGULAR_DETAIL_ALLOW) or _title_says_regular(title)):
+        for item in items:
+            title = item.get("report_nm") or ""
+            if _is_attachment_like(title):
                 continue
 
-            qlabel = infer_quarter(title, det, it.get("rcept_dt"))
-            raw.append({
-                "corp_code": corp_code,
-                "corp_name": it.get("corp_name"),
-                "rcept_no": it.get("rcept_no"),
-                "rcept_dt": it.get("rcept_dt"),
-                "report_nm": title,
-                "detail_ty": det,
-                "url": viewer_url(it.get("rcept_no")),
-                "quarter": qlabel,
-            })
+            detail_type = (item.get("pblntf_detail_ty") or "").upper()
+            if not ((detail_type in REGULAR_DETAIL_ALLOW) or _title_says_regular(title)):
+                continue
 
-        if len(items) < 100: 
+            quarter_label = infer_quarter(title, detail_type, item.get("rcept_dt"))
+            raw_rows.append(
+                {
+                    "corp_code": corp_code,
+                    "corp_name": item.get("corp_name"),
+                    "rcept_no": item.get("rcept_no"),
+                    "rcept_dt": item.get("rcept_dt"),
+                    "report_nm": title,
+                    "detail_ty": detail_type,
+                    "url": viewer_url(item.get("rcept_no")),
+                    "quarter": quarter_label,
+                }
+            )
+
+        if len(items) < 100:
             break
         page += 1
 
-    # rcept_no 중복 제외
-    seen = {}
-    for r in raw: seen.setdefault(r["rcept_no"], r)
-    rows = list(seen.values())
+    unique_by_rcept_no: Dict[str, Dict] = {}
+    for row in raw_rows:
+        unique_by_rcept_no.setdefault(row["rcept_no"], row)
 
-    # 완료된 최근 4개 분기 범위만 남김
-    targets = set(last_n_complete_quarters(4, asof=(asof or end.date())))
-    print("hi!")
+    rows = list(unique_by_rcept_no.values())
+    targets = set(last_n_complete_quarters(4, asof=(asof or end_dt.date())))
+
     rows.sort(key=lambda x: (x["quarter"], x["rcept_dt"], x["rcept_no"]), reverse=True)
-    rows = [r for r in rows if r["quarter"] in targets]
-    return rows
+    return [row for row in rows if row["quarter"] in targets]
 
-# 디코딩
-def _guess_decode(b):
-    for enc in ("utf-8","cp949","euc-kr","utf-16","latin1"):
-        try: return b.decode(enc)
-        except: pass
-    return b.decode("utf-8","ignore")
 
-# xml -> text
-def _xml_to_text(xbytes):
+def _guess_decode(blob: bytes) -> str:
+    """바이트 문자열을 인코딩 후보로 디코딩"""
+    for enc in ("utf-8", "cp949", "euc-kr", "utf-16", "latin1"):
+        try:
+            return blob.decode(enc)
+        except Exception:
+            continue
+    return blob.decode("utf-8", "ignore")
+
+
+def _xml_to_text(xml_bytes: bytes) -> str:
+    """XML 바이트를 텍스트로 변환"""
     try:
-        root = etree.fromstring(xbytes)
+        root = etree.fromstring(xml_bytes)
         texts = root.xpath("//text()")
-        txt = "\n".join(t.strip() for t in texts if t and t.strip())
-        txt = html.fromstring(f"<div>{txt}</div>").text_content()
-        return re.sub(r"\n{2,}", "\n\n", txt)
+        text = "\n".join(t.strip() for t in texts if t and t.strip())
+        text = html.fromstring(f"<div>{text}</div>").text_content()
+        return re.sub(r"\n{2,}", "\n\n", text)
     except Exception:
-        import re
-        t = re.sub(br"<[^>]+>", b" ", xbytes)
-        return re.sub(r"\s+", " ", t.decode("utf-8", "ignore"))
-    
-# html -> text
-def _html_to_text(h):
-    if isinstance(h,(bytes,bytearray)): 
-        h=_guess_decode(h)
+        stripped = re.sub(br"<[^>]+>", b" ", xml_bytes)
+        return re.sub(r"\s+", " ", stripped.decode("utf-8", "ignore"))
+
+
+def _html_to_text(content: str | bytes) -> str:
+    """HTML 문자열 또는 바이트를 텍스트로 변환"""
+    if isinstance(content, (bytes, bytearray)):
+        content = _guess_decode(content)
+
     try:
-        doc = html.fromstring(h)
-        txt = doc.text_content()
+        doc = html.fromstring(content)
+        text = doc.text_content()
     except Exception:
-        txt = re.sub(r"<[^>]+>", " ", h)
-    return re.sub(r"\s{2,}", " ", re.sub(r"\n{2,}", "\n\n", txt)).strip()
+        text = re.sub(r"<[^>]+>", " ", content)
 
-# ZIP 여부 스니핑 -> 안정적으로 텍스트 추출
-def download_text(rcept_no):
-    sess = _session()
-    r = sess.get(BASE_DOC_URL, params={"crtfc_key": DART_API_KEY, "rcept_no": rcept_no}, timeout=60)
-    content, ctype = r.content, (r.headers.get("Content-Type") or "").lower()
-    cdisp = (r.headers.get("Content-Disposition") or "").lower()
+    text = re.sub(r"\n{2,}", "\n\n", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip()
 
-    is_zip = (len(content)>=2 and content[:2]==b"PK") or ("zip" in ctype) or (".zip" in cdisp)
+
+def download_text(rcept_no: str) -> str:
+    """
+    rcept_no에 해당하는 본문을 텍스트로 다운로드
+    입력: rcept_no
+    출력: 본문 텍스트
+    """
+    session = _session()
+    resp = session.get(
+        BASE_DOC_URL,
+        params={"crtfc_key": DART_API_KEY, "rcept_no": rcept_no},
+        timeout=60,
+    )
+    content = resp.content
+    ctype = (resp.headers.get("Content-Type") or "").lower()
+    cdisp = (resp.headers.get("Content-Disposition") or "").lower()
+
+    is_zip = (len(content) >= 2 and content[:2] == b"PK") or ("zip" in ctype) or (".zip" in cdisp)
     if is_zip:
         try:
-            z = zipfile.ZipFile(io.BytesIO(content))
+            zf = zipfile.ZipFile(io.BytesIO(content))
         except BadZipFile:
             is_zip = False
         else:
-            names = z.namelist()
-            cand = [n for n in names if n.lower().endswith("document.xml")] \
-                 or [n for n in names if n.lower().endswith(".xml")]
-            if cand:
-                return _xml_to_text(z.read(cand[0]))
-            htmls = [n for n in names if n.lower().endswith((".html",".htm"))]
-            if htmls:
-                return _html_to_text(z.read(max(htmls, key=lambda n: z.getinfo(n).file_size)))
-            textlikes = [n for n in names if n.lower().endswith((".txt",".csv",".md",".json"))]
-            if textlikes:
-                return "\n\n".join(_guess_decode(z.read(n)) for n in textlikes).strip()
-            
-            # fallback: 합쳐서 텍스트화
-            parts=[]
-            for n in names:
-                try: b=z.read(n)
-                except: continue
-                if any(n.lower().endswith(ext) for ext in (".png",".jpg",".jpeg",".gif",".pdf")): 
-                    continue
-                if b.strip().startswith(b"<"):
-                    try: 
-                        parts.append(_xml_to_text(b))
-                        continue
-                    except: 
-                        pass
-                parts.append(_guess_decode(b))
-            return re.sub(r"\n{2,}","\n\n","\n\n".join(p for p in parts if p.strip())).strip()
+            names = zf.namelist()
 
-    # non-zip
+            xml_candidates = [n for n in names if n.lower().endswith("document.xml")] or [
+                n for n in names if n.lower().endswith(".xml")
+            ]
+            if xml_candidates:
+                return _xml_to_text(zf.read(xml_candidates[0]))
+
+            html_candidates = [n for n in names if n.lower().endswith((".html", ".htm"))]
+            if html_candidates:
+                largest = max(html_candidates, key=lambda n: zf.getinfo(n).file_size)
+                return _html_to_text(zf.read(largest))
+
+            text_candidates = [n for n in names if n.lower().endswith((".txt", ".csv", ".md", ".json"))]
+            if text_candidates:
+                return "\n\n".join(_guess_decode(zf.read(n)) for n in text_candidates).strip()
+
+            parts: List[str] = []
+            for name in names:
+                try:
+                    blob = zf.read(name)
+                except Exception:
+                    continue
+
+                if any(name.lower().endswith(ext) for ext in (".png", ".jpg", ".jpeg", ".gif", ".pdf")):
+                    continue
+
+                if blob.strip().startswith(b"<"):
+                    parts.append(_xml_to_text(blob))
+                else:
+                    parts.append(_guess_decode(blob))
+
+            merged = "\n\n".join(p for p in parts if p.strip())
+            return re.sub(r"\n{2,}", "\n\n", merged).strip()
+
     sniff = content[:4096].lower()
     if b"<html" in sniff or "text/html" in ctype:
         return _html_to_text(content)
     if b"<?xml" in content[:256] or "xml" in ctype:
         return _xml_to_text(content)
 
-    return re.sub(r"\s{2,}"," ", _guess_decode(content)).strip()
+    return re.sub(r"\s{2,}", " ", _guess_decode(content)).strip()
 
-# 분기 폴더 하위에 rcept_no_title.txt 저장
-def ensure_report_files(corp_root, filings):
-    saved = []
-    for f in filings:
-        qdir = os.path.join(corp_root, REPORTS_DIR_NAME, f["quarter"])
-        os.makedirs(qdir, exist_ok=True)
-        fname = f'{f["rcept_no"]}_{_safe(f["report_nm"])}.txt'
-        fpath = os.path.join(qdir, fname)
+
+def ensure_report_files(corp_root: str, filings: List[Dict]) -> List[Dict]:
+    """
+    보고서 목록을 분기 폴더에 TXT로 저장하고 저장 결과 반환
+    입력: corp_root, filings
+    출력: 저장 결과 리스트(path, meta, is_new)
+    """
+    saved: List[Dict] = []
+
+    for filing in filings:
+        quarter_dir = os.path.join(corp_root, REPORTS_DIR_NAME, filing["quarter"])
+        os.makedirs(quarter_dir, exist_ok=True)
+
+        filename = f'{filing["rcept_no"]}_{_safe(filing["report_nm"])}.txt'
+        filepath = os.path.join(quarter_dir, filename)
 
         is_new = False
-        if not os.path.exists(fpath) or os.path.getsize(fpath) < 2000:
+        if (not os.path.exists(filepath)) or (os.path.getsize(filepath) < 2000):
             try:
-                txt = download_text(f["rcept_no"])
-                with open(fpath, "w", encoding="utf-8") as w:
-                    w.write(txt)
+                text = download_text(filing["rcept_no"])
+                with open(filepath, "w", encoding="utf-8") as w:
+                    w.write(text)
                 is_new = True
                 time.sleep(0.4)
-            except Exception as e:
-                print("❌ 다운로드 실패:", f["rcept_no"], e)
+            except Exception as exc:
+                print("다운로드 실패", filing["rcept_no"], exc)
                 continue
 
-        meta = dict(f); meta["path"] = fpath
-        saved.append({"path": fpath, "meta": meta, "is_new": is_new})
+        meta = dict(filing)
+        meta["path"] = filepath
+        saved.append({"path": filepath, "meta": meta, "is_new": is_new})
+
     return saved
